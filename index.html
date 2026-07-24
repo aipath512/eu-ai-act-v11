@@ -746,7 +746,7 @@ footer{
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Regulatory Compliance Software",
       "operatingSystem": "Web",
-      "description": "Conversational EU AI Act guidance and automated generation of a firm-personalized compliance document set (~90 documents), available in 27 EU languages.",
+      "description": "Conversational EU AI Act guidance and automated generation of a firm-personalized compliance document set (70 documents), available in 27 EU languages.",
       "provider": {
         "@id": "https://eu-ai-act-ready.eu/#organization"
       },
@@ -829,7 +829,7 @@ footer{
       "@type": "Offer",
       "@id": "https://eu-ai-act-ready.eu/#offer-pack-generator",
       "name": "PACK GENERATOR™",
-      "description": "Generates a complete, firm-personalized EU AI Act compliance pack — approximately 90 documents across 10 operational modules and governance-level guides, each populated with the firm's name, URL, and designated AI Act responsible person.",
+      "description": "Generates a complete, firm-personalized EU AI Act compliance pack — 70 documents across 10 operational modules and governance-level guides, each populated with the firm's name, URL, and designated AI Act responsible person.",
       "url": "https://eu-ai-act-ready.eu/generator",
       "itemOffered": {
         "@id": "https://eu-ai-act-ready.eu/#compliance-service"
@@ -1639,6 +1639,212 @@ div[style*="background:linear-gradient(#090909,#050505)"]{
     <p style="margin:0; font-size:15px; color:#ccc;">If yes to any of the above — you already have AI governance responsibilities under the EU AI Act.</p>
   </section>
 
+  <section id="how-it-works" style="max-width:1200px; margin:0 auto 40px; padding:0 30px; color:#fff;">
+
+    <h2 style="font-size:26px; margin:0 0 24px; text-transform:uppercase; color:#ff3e3e;">How It Works</h2>
+
+    <style>
+      .wf-chain{
+        display:grid;
+        grid-template-columns:repeat(7, 1fr);
+        gap:0;
+        align-items:stretch;
+      }
+      @media(max-width:900px){
+        .wf-chain{ grid-template-columns:repeat(4, 1fr); gap:10px 0; }
+      }
+      @media(max-width:560px){
+        .wf-chain{ grid-template-columns:1fr; gap:10px 0; }
+      }
+      .wf-step{
+        position:relative;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        min-height:64px;
+        padding:10px 18px 10px 8px;
+        margin-right:-1px;
+      }
+      .wf-box{
+        border:1px solid rgba(255,51,51,.4);
+        border-radius:10px;
+        background:linear-gradient(160deg, rgba(20,20,20,.6), rgba(5,5,5,.8));
+        padding:12px 10px;
+        width:100%;
+        font-size:12.5px;
+        font-weight:800;
+        color:#f0f0f0;
+        text-transform:uppercase;
+        letter-spacing:.01em;
+        line-height:1.3;
+      }
+      .wf-step:not(:last-child)::after{
+        content:"→";
+        position:absolute;
+        right:-6px;
+        top:50%;
+        transform:translateY(-50%);
+        font-size:18px;
+        font-weight:900;
+        color:#ff3e3e;
+        z-index:2;
+      }
+      @media(max-width:900px){
+        .wf-step:nth-child(4)::after{ content:"↓"; right:auto; top:auto; bottom:-14px; left:50%; transform:translateX(-50%); }
+      }
+      @media(max-width:560px){
+        .wf-step::after{ content:"↓" !important; right:auto !important; top:auto !important; bottom:-14px !important; left:50% !important; transform:translateX(-50%) !important; }
+      }
+    </style>
+
+    <div class="wf-chain">
+      <div class="wf-step"><div class="wf-box">Ask</div></div>
+      <div class="wf-step"><div class="wf-box">Understand Obligations</div></div>
+      <div class="wf-step"><div class="wf-box">Analyse Company</div></div>
+      <div class="wf-step"><div class="wf-box">Generate Documents</div></div>
+      <div class="wf-step"><div class="wf-box">Review</div></div>
+      <div class="wf-step"><div class="wf-box">Export</div></div>
+      <div class="wf-step"><div class="wf-box">Ready For Audit</div></div>
+    </div>
+
+  </section>
+
+  <section id="stats" style="max-width:1200px; margin:0 auto 40px; padding:0 30px; color:#fff;">
+
+    <style>
+      .stats-grid{
+        display:grid;
+        grid-template-columns:repeat(4, 1fr);
+        gap:16px;
+      }
+      @media(max-width:900px){
+        .stats-grid{ grid-template-columns:repeat(2, 1fr); }
+      }
+      @media(max-width:560px){
+        .stats-grid{ grid-template-columns:1fr; }
+      }
+      .stat-card{
+        border:1px solid rgba(255,51,51,.35);
+        border-radius:14px;
+        padding:26px 20px;
+        background:linear-gradient(160deg, rgba(20,20,20,.55), rgba(5,5,5,.75));
+        text-align:center;
+      }
+      .stat-num{
+        font-size:38px;
+        font-weight:900;
+        color:#ff2020;
+        line-height:1.1;
+        margin-bottom:6px;
+      }
+      .stat-label{
+        font-size:12.5px;
+        font-weight:800;
+        color:#e5e5e5;
+        text-transform:uppercase;
+        letter-spacing:.03em;
+      }
+      .stat-card.badge .stat-num{
+        font-size:22px;
+        color:#00d4ff;
+      }
+    </style>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-num">113</div><div class="stat-label">Articles Indexed</div></div>
+      <div class="stat-card"><div class="stat-num">70</div><div class="stat-label">Documents Generated</div></div>
+      <div class="stat-card"><div class="stat-num">27</div><div class="stat-label">Languages</div></div>
+      <div class="stat-card"><div class="stat-num">10</div><div class="stat-label">Operational Modules</div></div>
+      <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">Document Types</div></div>
+      <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">AI Assistant</div></div>
+      <div class="stat-card badge"><div class="stat-num">✔</div><div class="stat-label">Inspector Ready</div></div>
+      <div class="stat-card badge"><div class="stat-num">✔</div><div class="stat-label">Evidence Ready</div></div>
+    </div>
+
+  </section>
+
+  <section id="comparison" style="max-width:1000px; margin:0 auto 40px; padding:0 30px; color:#fff;">
+
+    <h2 style="font-size:26px; margin:0 0 24px; text-transform:uppercase; color:#ff3e3e;">Why Not Just Ask ChatGPT?</h2>
+
+    <style>
+      .cmp-table{
+        width:100%;
+        border-collapse:separate;
+        border-spacing:0;
+        border-radius:14px;
+        overflow:hidden;
+        border:1px solid #333;
+      }
+      .cmp-table th{
+        font-size:13px;
+        text-transform:uppercase;
+        letter-spacing:.03em;
+        padding:16px 20px;
+        text-align:left;
+      }
+      .cmp-table th.col-generic{
+        background:#1a1a1a;
+        color:#999;
+      }
+      .cmp-table th.col-us{
+        background:linear-gradient(135deg,#ff2b2b,#c90016);
+        color:#fff;
+      }
+      .cmp-table td{
+        padding:16px 20px;
+        font-size:14.5px;
+        border-top:1px solid #2a2a2a;
+      }
+      .cmp-table td.col-generic{
+        background:#0d0d0d;
+        color:#888;
+      }
+      .cmp-table td.col-us{
+        background:#150404;
+        color:#f0f0f0;
+        font-weight:700;
+      }
+      .cmp-table td.col-us::before{
+        content:"✔ ";
+        color:#ff3e3e;
+      }
+    </style>
+
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th class="col-generic">Generic AI</th>
+          <th class="col-us">EU AI Act Ready</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-generic">Generic answers</td>
+          <td class="col-us">Regulation grounded</td>
+        </tr>
+        <tr>
+          <td class="col-generic">No evidence</td>
+          <td class="col-us">Evidence package</td>
+        </tr>
+        <tr>
+          <td class="col-generic">No documents</td>
+          <td class="col-us">70 documents</td>
+        </tr>
+        <tr>
+          <td class="col-generic">No audit trail</td>
+          <td class="col-us">Audit ready</td>
+        </tr>
+        <tr>
+          <td class="col-generic">Hallucinations possible</td>
+          <td class="col-us">Grounded implementation</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
   <section class="Ask-wrap" data-gated="true">
 
     <div class="Ask-shell">
@@ -1757,13 +1963,12 @@ div[style*="background:linear-gradient(#090909,#050505)"]{
     <div id="services-strong-title" data-i18n="services.strong.title" style="font-size:12px; color:#ff2020; font-weight:900; letter-spacing:.08em; margin-bottom:14px;">AT THE END, YOU RECEIVE</div>
     <ul style="margin:0; padding-left:20px; color:#f0f0f0; font-size:15px; line-height:2;">
       <li id="services-strong-li0" data-i18n="services.strong.li0">✔ AI Policy</li>
-      <li id="services-strong-li1" data-i18n="services.strong.li1">✔ AI System Inventory</li>
-      <li id="services-strong-li2" data-i18n="services.strong.li2">✔ Risk Classification & Assessment</li>
-      <li id="services-strong-li3" data-i18n="services.strong.li3">✔ Human Oversight Procedure</li>
-      <li id="services-strong-li4" data-i18n="services.strong.li4">✔ AI Literacy Records</li>
-      <li id="services-strong-li5" data-i18n="services.strong.li5">✔ Incident Response Procedure</li>
-      <li id="services-strong-li6" data-i18n="services.strong.li6">✔ Technical Documentation</li>
-      <li id="services-strong-li7" data-i18n="services.strong.li7">✔ Full Evidence Package — inspection-ready</li>
+      <li id="services-strong-li1" data-i18n="services.strong.li1">✔ AI Inventory</li>
+      <li id="services-strong-li2" data-i18n="services.strong.li2">✔ Human Oversight Procedure</li>
+      <li id="services-strong-li3" data-i18n="services.strong.li3">✔ AI Literacy Register</li>
+      <li id="services-strong-li4" data-i18n="services.strong.li4">✔ Incident Procedure</li>
+      <li id="services-strong-li5" data-i18n="services.strong.li5">✔ Risk Assessment</li>
+      <li id="services-strong-li6" data-i18n="services.strong.li6">✔ Evidence Package</li>
     </ul>
   </div>
 
@@ -1811,25 +2016,7 @@ div[style*="background:linear-gradient(#090909,#050505)"]{
     </div>
   </div>
 
-  <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505); margin-bottom:24px;">
-    <h3 id="services-moat-title" data-i18n="services.moat.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Why the 70-Document Corpus Is Your Moat</h3>
-    <p id="services-moat-p1" data-i18n="services.moat.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">The Inspection Readiness Factor:</strong> Regulators and notified bodies do not trust "AI outputs." They trust audit trails. By making the 70-document governance library publicly inspectable, you turn your product into a defensible artifact.</p>
-    <p id="services-moat-p2" data-i18n="services.moat.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">The Template-to-Tail Pipeline:</strong> By mapping 10 operational modules × 7 documents = 70 outputs, you solve the biggest pain point for SMEs — "we don't know what we don't know." A structured skeleton, populated with firm-branded specifics.</p>
-  </div>
 
-  <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505); margin-bottom:24px;">
-    <h3 id="services-strategic-title" data-i18n="services.strategic.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Strategic Architecture — The Connective Tissue</h3>
-    <p id="services-strategic-p1" data-i18n="services.strategic.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">The Golden Thread:</strong> When a system is classified "High-Risk" in Module 02, that classification automatically populates the severity fields in Module 05 and dictates the logging frequency in Module 09.</p>
-    <p id="services-strategic-p2" data-i18n="services.strategic.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">The ASK Interface:</strong> Not a general chatbot — a Contextual Interpreter. A question asked inside Module 06 (Technical Documentation) is answered only from that section of the 70-document library and EU AI Act Articles 11 & 18.</p>
-  </div>
-
-  <div style="border:1px solid #ff2020; border-radius:10px; padding:28px; background:linear-gradient(#1a0000,#050505); margin-bottom:24px;">
-    <h3 id="services-gtm-title" data-i18n="services.gtm.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Immediate Go-To-Market Advantage — RRVI & SMEs</h3>
-    <p id="services-gtm-p1" data-i18n="services.gtm.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">RRVI (Regulatory Risk & Value Indicator):</strong> Module 01 + 02 generate an instant Risk Exposure Score — e.g. "Your inventory shows 3 systems. 1 is prohibited, 2 are high-risk. Estimated compliance cost: €X." A lead-generation machine.</p>
-    <p id="services-gtm-p2" data-i18n="services.gtm.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">SME Entry Point:</strong> Large consultancies charge €50k+ for this. Immediate company-generation, priced per module, per quarter — SMEs map their exposure with Module 01+02, then upgrade to 05+06+07 when the regulator knocks.</p>
-  </div>
-
-  <p style="color:#999; font-size:13px; margin-bottom:24px;">contact@5thelement.ai</p>
 
   <div style="text-align:center;">
     <a href="#" id="services-cta" data-i18n="services.cta" data-gated="true" style="display:inline-block; padding:16px 40px; background:#ff2020; color:#fff; text-decoration:none; font-weight:900; font-size:16px; border-radius:8px; text-transform:uppercase; letter-spacing:.05em;">Generate Your Firm's Pack →</a>
@@ -1942,6 +2129,314 @@ SHA-256 • OpenTimestamps • Remote Inspector Access
 </div>
 
 </section>
+
+<section id="proof" style="max-width:1200px; margin:0 auto 60px; padding:40px 30px 0; border-top:1px solid #2a2a2a; color:#fff;">
+
+  <h2 id="proof-title" style="font-size:32px; color:#ff3e3e; margin-bottom:10px; text-transform:uppercase;">
+    See It, Don't Just Read About It
+  </h2>
+  <p style="max-width:800px; color:#c9c9c9; font-size:16px; line-height:1.7; margin-bottom:32px;">
+    People believe what they see.
+  </p>
+
+  <style>
+    .proof-chain{
+      display:grid;
+      grid-template-columns:repeat(6, 1fr);
+      gap:14px;
+      align-items:stretch;
+    }
+    @media(max-width:900px){
+      .proof-chain{ grid-template-columns:repeat(3, 1fr); }
+    }
+    @media(max-width:560px){
+      .proof-chain{ grid-template-columns:1fr; }
+    }
+    .proof-step{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+    }
+    .proof-shot{
+      aspect-ratio:4/3;
+      border-radius:12px;
+      border:1px solid rgba(255,51,51,.35);
+      background:linear-gradient(160deg, rgba(20,20,20,.55), rgba(5,5,5,.75));
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .proof-shot img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .proof-placeholder{
+      font-size:11px;
+      color:#777;
+      text-align:center;
+      padding:0 10px;
+      line-height:1.5;
+    }
+    .proof-label{
+      margin-top:8px;
+      font-size:12px;
+      font-weight:800;
+      color:#f0f0f0;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      text-align:center;
+    }
+    .proof-arrow{
+      display:none;
+    }
+    @media(min-width:561px){
+      .proof-step:not(:last-child)::after{
+        content:"→";
+        position:absolute;
+        right:-12px;
+        top:calc(50% - 12px);
+        transform:translateX(50%);
+        font-size:20px;
+        font-weight:900;
+        color:#ff3e3e;
+        z-index:2;
+      }
+    }
+  </style>
+
+  <div class="proof-chain">
+
+    <div class="proof-step">
+      <div class="proof-shot" id="proof-shot-0">
+        <img src="assets/proof/01-screenshot.png" alt="Product screenshot"
+             onerror="this.style.display='none'; this.parentElement.querySelector('.proof-placeholder').style.display='flex';">
+        <div class="proof-placeholder" style="display:none;">Needs: assets/proof/01-screenshot.png<br>(app UI screenshot)</div>
+      </div>
+      <div class="proof-label">Screenshot</div>
+    </div>
+
+    <div class="proof-step">
+      <div class="proof-shot" id="proof-shot-1">
+        <img src="assets/proof/02-generated-document.png" alt="Generated document"
+             onerror="this.style.display='none'; this.parentElement.querySelector('.proof-placeholder').style.display='flex';">
+        <div class="proof-placeholder" style="display:none;">Needs: assets/proof/02-generated-document.png<br>(a filled RRVI doc)</div>
+      </div>
+      <div class="proof-label">Generated Document</div>
+    </div>
+
+    <div class="proof-step">
+      <div class="proof-shot" id="proof-shot-2">
+        <img src="assets/proof/03-inspector-pdf.png" alt="Inspector-ready PDF"
+             onerror="this.style.display='none'; this.parentElement.querySelector('.proof-placeholder').style.display='flex';">
+        <div class="proof-placeholder" style="display:none;">Needs: assets/proof/03-inspector-pdf.png<br>(exported PDF page)</div>
+      </div>
+      <div class="proof-label">Inspector-Ready PDF</div>
+    </div>
+
+    <div class="proof-step">
+      <div class="proof-shot" id="proof-shot-3">
+        <img src="assets/proof/04-generated-register.png" alt="Generated register"
+             onerror="this.style.display='none'; this.parentElement.querySelector('.proof-placeholder').style.display='flex';">
+        <div class="proof-placeholder" style="display:none;">Needs: assets/proof/04-generated-register.png<br>(a populated register)</div>
+      </div>
+      <div class="proof-label">Generated Register</div>
+    </div>
+
+    <div class="proof-step">
+      <div class="proof-shot" id="proof-shot-4">
+        <img src="assets/proof/05-ai-conversation.png" alt="AI conversation"
+             onerror="this.style.display='none'; this.parentElement.querySelector('.proof-placeholder').style.display='flex';">
+        <div class="proof-placeholder" style="display:none;">Needs: assets/proof/05-ai-conversation.png<br>(Ask box exchange)</div>
+      </div>
+      <div class="proof-label">AI Conversation</div>
+    </div>
+
+    <div class="proof-step">
+      <div class="proof-shot" id="proof-shot-5">
+        <img src="assets/proof/06-evidence.png" alt="Evidence package"
+             onerror="this.style.display='none'; this.parentElement.querySelector('.proof-placeholder').style.display='flex';">
+        <div class="proof-placeholder" style="display:none;">Needs: assets/proof/06-evidence.png<br>(SHA/OTS evidence view)</div>
+      </div>
+      <div class="proof-label">Evidence</div>
+    </div>
+
+  </div>
+
+</section>
+  <section id="testimonials" style="max-width:1200px; margin:0 auto 40px; padding:40px 30px 0; border-top:1px solid #2a2a2a; color:#fff;">
+
+    <div style="font-size:12px; color:#888; text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px;">
+      Proof of implementation
+    </div>
+    <h2 style="font-size:26px; margin:0 0 8px; text-transform:uppercase; color:#ff3e3e;">Who's Actually Running RRVI</h2>
+    <p style="max-width:800px; color:#c9c9c9; font-size:14px; line-height:1.7; margin-bottom:28px;">
+      Not case studies from strangers — the same EU AI Act Ready system, running on the businesses behind it.
+    </p>
+
+    <style>
+      .tst-grid{
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:18px;
+        margin-bottom:20px;
+      }
+      @media(max-width:900px){
+        .tst-grid{ grid-template-columns:1fr; }
+      }
+      .tst-card{
+        border:1px solid #444;
+        border-radius:12px;
+        padding:24px;
+        background:linear-gradient(160deg, rgba(20,20,20,.55), rgba(5,5,5,.75));
+      }
+      .tst-entity{
+        font-size:12px;
+        font-weight:900;
+        text-transform:uppercase;
+        letter-spacing:.03em;
+        color:#ff3e3e;
+        margin-bottom:10px;
+      }
+      .tst-quote{
+        font-size:14.5px;
+        line-height:1.7;
+        color:#e5e5e5;
+        margin-bottom:14px;
+        font-style:italic;
+      }
+      .tst-author{
+        font-size:12.5px;
+        color:#999;
+      }
+      .tst-placeholder{
+        color:#666;
+        font-style:normal;
+      }
+      .ai-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:18px;
+      }
+      @media(max-width:700px){
+        .ai-grid{ grid-template-columns:1fr; }
+      }
+      .ai-card{
+        border:1px solid #444;
+        border-radius:12px;
+        padding:24px;
+        background:linear-gradient(160deg, rgba(20,20,20,.55), rgba(5,5,5,.75));
+      }
+      .ai-card.pending{
+        border-style:dashed;
+        opacity:.65;
+      }
+      .ai-label{
+        font-size:12px;
+        font-weight:900;
+        text-transform:uppercase;
+        letter-spacing:.03em;
+        color:#00d4ff;
+        margin-bottom:10px;
+      }
+      .ai-score{
+        font-size:22px;
+        font-weight:900;
+        color:#ff2020;
+        margin-bottom:10px;
+      }
+      .ai-quote{
+        font-size:13.5px;
+        line-height:1.7;
+        color:#d8d8d8;
+        margin-bottom:12px;
+      }
+      .ai-scope{
+        font-size:11.5px;
+        color:#888;
+        border-top:1px solid #333;
+        padding-top:10px;
+        margin-top:10px;
+        line-height:1.6;
+      }
+    </style>
+
+    <!-- ENTITY / IMPLEMENTATION PROOF -->
+    <div class="tst-grid">
+
+      <div class="tst-card">
+        <div class="tst-entity">ECBTax.com</div>
+        <div class="tst-quote tst-placeholder">[Roxana Deak — quote specific to RRVI / EU AI Act Ready implementation, pending. Confirmed: keeping AiVenture as the compliance solution, per her direct confirmation.]</div>
+        <div class="tst-author">Roxana Deak, FCCA · CPA · CCF — CEO &amp; Founder</div>
+      </div>
+
+      <div class="tst-card">
+        <div class="tst-entity">AiVenture.ro</div>
+        <div class="tst-quote tst-placeholder">[Quote pending — AiVenture running RRVI on itself, same solution used by clients.]</div>
+        <div class="tst-author">Eli Ionescu — Founder &amp; CEO</div>
+      </div>
+
+      <div class="tst-card">
+        <div class="tst-entity">5thElement.ai</div>
+        <div class="tst-quote tst-placeholder">[Quote pending — canonical implementation reference.]</div>
+        <div class="tst-author">5thElement.ai — Root Authority</div>
+      </div>
+
+    </div>
+
+    <!-- AI-TO-AI ASSESSMENT -->
+    <div class="ai-grid">
+
+      <div class="ai-card">
+        <div class="ai-label">Claude Sonnet 5 — Architecture Assessment</div>
+        <div class="ai-score">8 / 10</div>
+        <div class="ai-quote">"The 10-module × 7-document-type structure is a genuinely sound way to decompose EU AI Act compliance — it mirrors how real ISO-style management systems are organized, not a superficial checklist wrapper. The cross-module logic — a High-Risk classification in Module 02 propagating to severity fields in Module 05 and logging frequency in Module 09 — is a real architectural strength most compliance-generator tools don't have. The SHA-256 + OpenTimestamps evidence layer is a legitimate, verifiable trust mechanism, not marketing dressing."</div>
+        <div class="ai-scope">Scope: structural and conceptual design review, based on the module architecture and cross-module logic. Does not include a review of full generated document output. Dated per assessment session. — Claude, Anthropic</div>
+      </div>
+
+      <div class="ai-card pending">
+        <div class="ai-label">Gemini AI — Architecture Assessment</div>
+        <div class="ai-score">Pending</div>
+        <div class="ai-quote tst-placeholder">[Awaiting real Gemini response — run the RRVI-specific prompt with actual generated documents attached, then paste the response here to replace this placeholder.]</div>
+        <div class="ai-scope">Scope: to be confirmed once the real assessment is run.</div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="rrvi-deep-dive" style="max-width:1200px; margin:0 auto 40px; padding:40px 30px 0; border-top:1px solid #2a2a2a; color:#fff;">
+
+    <div style="font-size:12px; color:#888; text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px;">
+      For the technically curious
+    </div>
+    <h2 style="font-size:26px; margin:0 0 24px; text-transform:uppercase; color:#ff3e3e;">How the Architecture Holds Up Under Scrutiny</h2>
+
+    <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505); margin-bottom:24px;">
+      <h3 id="services-moat-title" data-i18n="services.moat.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Why the 70-Document Corpus Is Your Moat</h3>
+      <p id="services-moat-p1" data-i18n="services.moat.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">The Inspection Readiness Factor:</strong> Regulators and notified bodies do not trust "AI outputs." They trust audit trails. By making the 70-document governance library publicly inspectable, you turn your product into a defensible artifact.</p>
+      <p id="services-moat-p2" data-i18n="services.moat.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">The Template-to-Tail Pipeline:</strong> By mapping 10 operational modules × 7 documents = 70 outputs, you solve the biggest pain point for SMEs — "we don't know what we don't know." A structured skeleton, populated with firm-branded specifics.</p>
+    </div>
+
+    <div style="border:1px solid #444; border-radius:10px; padding:28px; background:linear-gradient(#0d0d0d,#050505); margin-bottom:24px;">
+      <h3 id="services-strategic-title" data-i18n="services.strategic.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Strategic Architecture — The Connective Tissue</h3>
+      <p id="services-strategic-p1" data-i18n="services.strategic.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">The Golden Thread:</strong> When a system is classified "High-Risk" in Module 02, that classification automatically populates the severity fields in Module 05 and dictates the logging frequency in Module 09.</p>
+      <p id="services-strategic-p2" data-i18n="services.strategic.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">The ASK Interface:</strong> Not a general chatbot — a Contextual Interpreter. A question asked inside Module 06 (Technical Documentation) is answered only from that section of the 70-document library and EU AI Act Articles 11 & 18.</p>
+    </div>
+
+    <div style="border:1px solid #ff2020; border-radius:10px; padding:28px; background:linear-gradient(#1a0000,#050505); margin-bottom:24px;">
+      <h3 id="services-gtm-title" data-i18n="services.gtm.title" style="color:#ff2020; font-size:18px; margin:0 0 14px;">Immediate Go-To-Market Advantage — RRVI & SMEs</h3>
+      <p id="services-gtm-p1" data-i18n="services.gtm.p1" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0 0 14px;"><strong style="color:#fff;">RRVI (Regulatory Risk & Value Indicator):</strong> Module 01 + 02 generate an instant Risk Exposure Score — e.g. "Your inventory shows 3 systems. 1 is prohibited, 2 are high-risk. Estimated compliance cost: €X." A lead-generation machine.</p>
+      <p id="services-gtm-p2" data-i18n="services.gtm.p2" style="color:#f0f0f0; font-size:15px; line-height:1.8; margin:0;"><strong style="color:#fff;">SME Entry Point:</strong> Large consultancies charge €50k+ for this. Immediate company-generation, priced per module, per quarter — SMEs map their exposure with Module 01+02, then upgrade to 05+06+07 when the regulator knocks.</p>
+    </div>
+
+    <p style="color:#999; font-size:13px; margin-bottom:0;">contact@5thelement.ai</p>
+
+  </section>
 
 <section id="offer" aria-labelledby="offer-title" style="max-width:1200px; margin:60px auto; padding:40px 30px 0; border-top:1px solid #2a2a2a; color:#fff;">
   <h2 id="offer-title" style="font-size:32px; color:#ff3e3e; margin-bottom:16px; text-transform:uppercase;">Offer</h2>
@@ -2206,6 +2701,76 @@ font-weight:700;
         <p id="faq-a10" style="margin:0; color:#a8a8a8; line-height:1.6;">Start with an AI inventory, risk assessment, and technical documentation mapping as per EU AI Act Ready™ guidelines.</p>
       </div>
     </div>
+  </section>
+
+  <section id="closing-cta" style="max-width:900px; margin:60px auto; padding:40px 30px 0; border-top:1px solid #2a2a2a; color:#fff; text-align:center;">
+
+    <h2 style="font-size:28px; margin:0 0 28px; text-transform:uppercase; color:#ff3e3e;">
+      Ready to Prepare Your Organisation?
+    </h2>
+
+    <style>
+      .cta-chain{
+        display:grid;
+        grid-template-columns:repeat(4, 1fr);
+        gap:0;
+        margin:0 auto 20px;
+        max-width:760px;
+      }
+      @media(max-width:700px){
+        .cta-chain{ grid-template-columns:1fr; gap:10px 0; }
+      }
+      .cta-step{
+        position:relative;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        min-height:60px;
+        padding:8px 16px 8px 6px;
+      }
+      .cta-box{
+        border:1px solid rgba(255,51,51,.4);
+        border-radius:10px;
+        background:linear-gradient(160deg, rgba(20,20,20,.6), rgba(5,5,5,.8));
+        padding:12px 10px;
+        width:100%;
+        font-size:12.5px;
+        font-weight:800;
+        color:#f0f0f0;
+        text-transform:uppercase;
+        letter-spacing:.01em;
+        line-height:1.3;
+      }
+      .cta-step:not(:last-child)::after{
+        content:"→";
+        position:absolute;
+        right:-4px;
+        top:50%;
+        transform:translateY(-50%);
+        font-size:16px;
+        font-weight:900;
+        color:#ff3e3e;
+        z-index:2;
+      }
+      @media(max-width:700px){
+        .cta-step::after{ content:"↓" !important; right:auto !important; top:auto !important; bottom:-14px !important; left:50% !important; transform:translateX(-50%) !important; }
+      }
+    </style>
+
+    <div class="cta-chain">
+      <div class="cta-step"><div class="cta-box">Start Free</div></div>
+      <div class="cta-step"><div class="cta-box">Ask One Question</div></div>
+      <div class="cta-step"><div class="cta-box">Generate One Document</div></div>
+      <div class="cta-step"><div class="cta-box">Upgrade Only If Useful</div></div>
+    </div>
+
+    <a href="#question" style="display:inline-block; background:linear-gradient(135deg,#ff2b2b,#c90016); color:#fff; font-weight:900; font-size:16px; text-decoration:none; padding:16px 40px; border-radius:10px; box-shadow:0 8px 18px rgba(217,0,24,.5); margin:20px 0 14px;">
+      Start Free →
+    </a>
+
+    <p style="color:#999; font-size:13px; margin:0;">No pressure.</p>
+
   </section>
 
 </main>
@@ -2662,7 +3227,7 @@ const FAQ_DATA = {
 };
 
 const PAGE_EXTRAS = {
-  en: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSATIONAL IN 27 LANGUAGES", faqTitle: "Compliance FAQ", login: "Login", newsLabel: "⚡  NEW GUIDANCE", newsItems: ["regulatory intelligence", "10 operational modules now live", "70-document governance library", "High-risk obligations guidance updated", "RRVI™ remote verification infrastructure", "National authority developments", "Article 50 transparency requirements", "Conversational AI Act guidance in 27 EU languages"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
+  en: {heroTitle: "<span class='hero-title-main'>Using AI in your company?</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSATIONAL IN 27 LANGUAGES", faqTitle: "Compliance FAQ", login: "Login", newsLabel: "⚡  NEW GUIDANCE", newsItems: ["regulatory intelligence", "10 operational modules now live", "70-document governance library", "High-risk obligations guidance updated", "RRVI™ remote verification infrastructure", "National authority developments", "Article 50 transparency requirements", "Conversational AI Act guidance in 27 EU languages"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
   fr: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Générateur™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSATIONNEL EN 27 LANGUES", faqTitle: "FAQ Conformité", login: "Connexion", newsLabel: "⚡  NOUVELLES DIRECTIVES", newsItems: ["veille réglementaire", "10 modules opérationnels désormais actifs", "bibliothèque de gouvernance de 70 documents", "Directives sur les obligations à haut risque mises à jour", "infrastructure de vérification à distance RRVI™", "Évolutions des autorités nationales", "Exigences de transparence de l'article 50", "Guidance conversationnelle sur l'AI Act en 27 langues UE"], demoLabel: "🎯 DÉMO", yourFirmLabel: "💻 GÉNÉRATEUR", footerTagline: "Ask &amp; Generator™"},
   de: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generator™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — KONVERSATIONELL IN 27 SPRACHEN", faqTitle: "Konformität FAQ", login: "Anmelden", newsLabel: "⚡  NEUE LEITLINIEN", newsItems: ["Regulatorische Intelligenz", "10 operative Module jetzt live", "Governance-Bibliothek mit 70 Dokumenten", "Leitlinien zu Hochrisiko-Pflichten aktualisiert", "RRVI™ Fernverifizierungsinfrastruktur", "Entwicklungen nationaler Behörden", "Transparenzanforderungen nach Artikel 50", "Konversationelle AI-Act-Beratung in 27 EU-Sprachen"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERATOR", footerTagline: "Ask &amp; Generator™"},
   es: {heroTitle: "<span class='hero-title-main'>EU AI ACT™</span><span class='hero-title-badge'>PACK Generador™</span>", heroSubtitle: "Ask &amp; GENERATOR™", badge: "🌍 EU AI ACT — CONVERSACIONAL EN 27 IDIOMAS", faqTitle: "FAQ de Cumplimiento", login: "Iniciar sesión", newsLabel: "⚡  NUEVA ORIENTACIÓN", newsItems: ["inteligencia regulatoria", "10 módulos operativos ya activos", "biblioteca de gobernanza de 70 documentos", "Orientación sobre obligaciones de alto riesgo actualizada", "infraestructura de verificación remota RRVI™", "Novedades de las autoridades nacionales", "Requisitos de transparencia del artículo 50", "Orientación conversacional sobre la AI Act en 27 idiomas UE"], demoLabel: "🎯 DEMO", yourFirmLabel: "💻 GENERADOR", footerTagline: "Ask &amp; Generator™"},
