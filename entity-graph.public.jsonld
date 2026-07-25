@@ -1,0 +1,108 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://eu-ai-act-ready.eu/#organization",
+      "name": "EU AI Act Ready™",
+      "legalName": "AiVenture S.R.L.",
+      "alternateName": [
+        "EU AI Act Ready",
+        "AiVenture SRL",
+        "AiVenture"
+      ],
+      "url": "https://eu-ai-act-ready.eu/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://eu-ai-act-ready.eu/#logo",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
+      },
+      "image": {
+        "@id": "https://eu-ai-act-ready.eu/#logo"
+      },
+      "foundingDate": "2026",
+      "founder": {
+        "@id": "https://eu-ai-act-ready.eu/#founder"
+      },
+      "areaServed": [
+        "EU",
+        "EEA"
+      ],
+      "contactPoint": {
+        "@id": "https://eu-ai-act-ready.eu/#contact"
+      },
+      "sameAs": [
+        "https://twitter.com/eu_ai_act_ready",
+        "https://linkedin.com/company/eu-ai-act-ready"
+      ],
+      "keywords": [
+        "EU AI Act",
+        "AI Compliance",
+        "AI Governance",
+        "Regulatory Intelligence",
+        "GPAI Obligations",
+        "AI Inventory",
+        "Compliance Generator",
+        "AI Act Readiness"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence Act",
+        "Machine Learning Governance",
+        "Data Sovereignty",
+        "EU Digital Strategy"
+      ],
+      "hasOfferCatalog": {
+        "@id": "https://eu-ai-act-ready.eu/#offer-catalog"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://eu-ai-act-ready.eu/#founder",
+      "name": "Dan Ionescu",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://eu-ai-act-ready.eu/#contact",
+      "contactType": "customer support",
+      "email": "support@eu-ai-act-ready.eu",
+      "availableLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready™",
+      "alternateName": "EU AI Act Ready",
+      "description": "Multilingual, document-first EU AI Act readiness platform combining conversational regulatory guidance with a document governance library.",
+      "inLanguage": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "ro",
+        "pl"
+      ],
+      "publisher": {
+        "@id": "https://eu-ai-act-ready.eu/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://eu-ai-act-ready.eu/ask?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
