@@ -45,16 +45,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/faq</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/glossary</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
 <loc>https://eu-ai-act-ready.eu/admin-guide</loc>
 <priority>0.75</priority>
 </url>
@@ -190,16 +180,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/resources</loc>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/blog</loc>
-<priority>0.7</priority>
-</url>
-
-<url>
 <loc>https://eu-ai-act-ready.eu/guide</loc>
 <priority>0.6</priority>
 </url>
@@ -223,6 +203,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>https://eu-ai-act-ready.eu/contact</loc>
 <priority>0.5</priority>
 </url>
+
 <url>
 <loc>https://eu-ai-act-ready.eu/ecbtax</loc>
 <priority>0.7</priority>

@@ -1,37 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 
 <url>
-<loc>https://eu-ai-act-ready.eu/glossary/</loc>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/glossary/ai-system</loc>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/glossary/high-risk-ai-system</loc>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/glossary/provider</loc>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/glossary/deployer</loc>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/glossary/ai-literacy</loc>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/glossary/human-oversight</loc>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/glossary/transparency</loc>
+<loc>https://eu-ai-act-ready.eu/glossary</loc>
+<priority>0.5</priority>
 </url>
 
 </urlset>

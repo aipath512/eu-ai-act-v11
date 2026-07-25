@@ -1,89 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/</loc>
+<loc>https://eu-ai-act-ready.eu/blog</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-01</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-02</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-02.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-03</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-03.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-04</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-04.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-05</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-05.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-06</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-06.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-07</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-07.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-08</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-08.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-09</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-09.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-10</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-10.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-11</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-11.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-12</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-12.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-13</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-13.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-14</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-14.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-15</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-15.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-16</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-16.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-17</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-17.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-18</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-18.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-19</loc>
+<priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://eu-ai-act-ready.eu/blog/post-19.html</loc>
-</url>
-
-<url>
-<loc>https://eu-ai-act-ready.eu/blog/post-20.html</loc>
+<loc>https://eu-ai-act-ready.eu/blog/post-20</loc>
+<priority>0.5</priority>
 </url>
 
 </urlset>
