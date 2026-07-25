@@ -9,8 +9,8 @@ const ENTITY_GRAPH = {"@context":"https://schema.org","@graph":[{"@type":"Organi
 
 const ORIGIN = "https://eu-ai-act-ready.eu";
 
-// Which languages each page ACTUALLY has translations for.
-// Read directly from the i18n objects in the files — do not inflate.
+// Languages each page ACTUALLY has translations for — read from the
+// i18n objects in the files. Do not inflate this.
 const COVERAGE = {
   "/": [
     "bg",
@@ -57,7 +57,6 @@ function normalise(p) {
   return p || "/";
 }
 
-// "/ro/why" -> { lang:"ro", base:"/why" }   "/why" -> { lang:"en", base:"/why" }
 function split(pathname) {
   const p = normalise(pathname);
   const m = p.match(/^\/([a-z]{2})(\/.*)?$/);
@@ -71,6 +70,8 @@ function langHref(lang, base) {
   if (lang === "en") return ORIGIN + base;
   return ORIGIN + "/" + lang + (base === "/" ? "" : base);
 }
+
+const BOOT = "(function(){\n  var L=\"__LANG__\";\n  function apply(){\n    try{\n      var b=document.querySelector('.lang-btn[data-lang=\"'+L+'\"]');\n      if(b){b.click();return true;}\n      var s=document.getElementById(\"langSelectNew\");\n      if(s){s.value=L;s.dispatchEvent(new Event(\"change\",{bubbles:true}));return true;}\n      if(typeof applyLanguage===\"function\"){applyLanguage(L);return true;}\n    }catch(e){console.warn(\"[lang] \",e);}\n    return false;\n  }\n  function run(){ if(!apply()){ setTimeout(apply,400); setTimeout(apply,1500); } }\n  if(document.readyState===\"loading\")document.addEventListener(\"DOMContentLoaded\",run);\n  else run();\n})();";
 
 class DropCanonical { element(el) { el.remove(); } }
 
@@ -98,15 +99,13 @@ class HtmlLang {
   element(el) { el.setAttribute("lang", this.lang); }
 }
 
-// Triggers the page's own applyLanguage() for the URL's language.
+// Clicks the page's own language button, the same path a visitor uses.
 class BodyLangBoot {
   constructor(lang) { this.lang = lang; }
   element(el) {
     if (this.lang === "en") return;
-    el.append(
-      '<script>document.addEventListener("DOMContentLoaded",function(){' +
-      'if(typeof applyLanguage==="function"){try{applyLanguage("' + this.lang +
-      '")}catch(e){}}});</script>', { html: true });
+    el.append("<script>" + BOOT.replace("__LANG__", this.lang) + "</script>",
+              { html: true });
   }
 }
 
@@ -116,7 +115,6 @@ export async function onRequest(context) {
 
   let response;
   if (lang !== "en" && COVERAGE[base]) {
-    // language URL -> serve the base asset
     const target = new URL(url);
     target.pathname = base;
     response = await context.env.ASSETS.fetch(new Request(target, context.request));
