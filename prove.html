@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prove Your Readiness With Evidence — EU AI Act Ready™</title>
+<meta name="description" content="Step 3 of EU AI Act readiness — how RRVI™ evidence, SHA-256 hashing, and OpenTimestamps proof let you demonstrate compliance to an auditor or inspector.">
+<link rel="canonical" href="https://eu-ai-act-ready.eu/prove">
+
+<meta property="og:title" content="Prove Your Readiness With Evidence — EU AI Act Ready™">
+<meta property="og:description" content="Step 3 of EU AI Act readiness — how RRVI™ evidence lets you demonstrate compliance to an auditor or inspector.">
+<meta property="og:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+<meta property="og:url" content="https://eu-ai-act-ready.eu/prove">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EU AI Act Ready™">
+<meta property="og:locale" content="en_EU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prove Your Readiness With Evidence — EU AI Act Ready™">
+<meta name="twitter:description" content="Step 3 of EU AI Act readiness — how RRVI™ evidence lets you demonstrate compliance to an auditor or inspector.">
+<meta name="twitter:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": "https://eu-ai-act-ready.eu/#website", "url": "https://eu-ai-act-ready.eu/", "name": "EU AI Act Ready", "publisher": { "@id": "https://eu-ai-act-ready.eu/#organization" } },
+    { "@type": "Organization", "@id": "https://eu-ai-act-ready.eu/#organization", "name": "EU AI Act Ready™", "legalName": "AiVenture S.R.L.", "url": "https://eu-ai-act-ready.eu/", "logo": { "@type": "ImageObject", "url": "https://eu-ai-act-ready.eu/assets/logo.png" } },
+    {
+      "@type": "WebPage",
+      "@id": "https://eu-ai-act-ready.eu/prove#page",
+      "url": "https://eu-ai-act-ready.eu/prove",
+      "name": "Prove Your Readiness With Evidence — EU AI Act Ready™",
+      "description": "Step 3 of EU AI Act readiness — how RRVI™ evidence, SHA-256 hashing, and OpenTimestamps proof let you demonstrate compliance to an auditor or inspector.",
+      "isPartOf": { "@id": "https://eu-ai-act-ready.eu/#website" },
+      "inLanguage": "en",
+      "breadcrumb": { "@id": "https://eu-ai-act-ready.eu/prove#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://eu-ai-act-ready.eu/prove#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/" },
+        { "@type": "ListItem", "position": 2, "name": "Prove", "item": "https://eu-ai-act-ready.eu/prove" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://eu-ai-act-ready.eu/prove#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What does proof mean for a compliance document?", "acceptedAnswer": { "@type": "Answer", "text": "It means an auditor can verify a document existed in a specific state at a specific time and hasn't been altered since — not just that you say it's true." } },
+        { "@type": "Question", "name": "What is SHA-256 hashing used for here?", "acceptedAnswer": { "@type": "Answer", "text": "Each generated document gets a unique cryptographic fingerprint (hash). If even one character changes, the hash changes completely, making tampering immediately detectable." } },
+        { "@type": "Question", "name": "What is OpenTimestamps?", "acceptedAnswer": { "@type": "Answer", "text": "A free, open protocol that anchors a document's hash to the Bitcoin blockchain, creating an independently verifiable timestamp that doesn't depend on trusting any single company's server." } },
+        { "@type": "Question", "name": "Does this replace formal certification?", "acceptedAnswer": { "@type": "Answer", "text": "No — it makes your evidence verifiable and inspection-ready, not certified. There is a real difference between readiness (structured, traceable, inspectable evidence) and formal third-party certification." } },
+        { "@type": "Question", "name": "What would an inspector actually see?", "acceptedAnswer": { "@type": "Answer", "text": "A structured evidence trail: the document itself, its hash, its timestamp proof, and which module and responsible person it's tied to — reviewable remotely, without an on-site visit." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{ --bg:#030508; --red:#e03a1e; --red2:#ff2020; --text:#f0f0f0; --muted:#a8a8a8; --border:#2a2a2a; }
+*{box-sizing:border-box;margin:0;padding:0;}
+body{ background:var(--bg); color:var(--text); font-family:Inter,Arial,Helvetica,sans-serif; line-height:1.7; }
+header{ border-bottom:1px solid var(--border); padding:18px 24px; display:flex; align-items:center; justify-content:space-between; }
+header a.back{ color:var(--red2); text-decoration:none; font-weight:700; font-size:14px; }
+header .brand{ font-weight:900; letter-spacing:.04em; color:#fff; font-size:14px; text-transform:uppercase; }
+main{ max-width:900px; margin:0 auto; padding:0 24px 80px; }
+h1{ font-size:clamp(28px,5vw,42px); color:#fff; text-transform:uppercase; margin-bottom:8px; letter-spacing:-.01em; }
+h2{ color:var(--red2); font-size:22px; margin:44px 0 14px; text-transform:uppercase; letter-spacing:.02em; }
+p{ color:var(--text); margin-bottom:14px; font-size:15.5px; }
+.sub{ color:var(--muted); font-size:16px; margin-bottom:8px; max-width:700px; }
+.evidence-chain{ display:flex; flex-wrap:wrap; gap:0; margin:24px 0; }
+.evidence-step{ flex:1; min-width:150px; text-align:center; padding:16px 12px; position:relative; }
+.evidence-step .box{ border:1px solid rgba(255,51,51,.4); border-radius:10px; background:linear-gradient(160deg, rgba(20,20,20,.6), rgba(5,5,5,.8)); padding:16px 10px; font-size:13px; font-weight:800; color:#f0f0f0; text-transform:uppercase; }
+.faq details{ border:1px solid var(--border); border-radius:10px; margin-bottom:10px; overflow:hidden; background:linear-gradient(160deg, rgba(20,20,20,.55), rgba(5,5,5,.75)); }
+.faq summary{ list-style:none; cursor:pointer; padding:16px 18px; font-size:15px; font-weight:700; color:#fff; }
+.faq summary::-webkit-details-marker{ display:none; }
+.faq p{ padding:0 18px 16px; color:var(--muted); font-size:14px; margin:0; }
+.cta{ display:inline-block; background:linear-gradient(135deg,#ff2b2b,#c90016); color:#fff; font-weight:900; font-size:15px; text-decoration:none; padding:14px 28px; border-radius:10px; margin-top:20px; text-transform:uppercase; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="https://eu-ai-act-ready.eu/">&larr; EU AI Act Ready™</a>
+  <span class="brand">5thelement.AI</span>
+</header>
+
+<main>
+  <nav aria-label="breadcrumb" style="padding:24px 0 0;font-size:13px;color:#999;">
+    <a href="https://eu-ai-act-ready.eu/" style="color:#999;text-decoration:none;">Home</a>
+    <span style="margin:0 6px;">&rsaquo;</span>
+    <span style="color:#f0f0f0;">Prove</span>
+  </nav>
+
+  <div style="padding-top:20px;">
+    <h1>3. Prove — Your Readiness With Evidence</h1>
+    <p class="sub">Documents alone are claims. This step is about turning those claims into something an auditor can independently verify.</p>
+  </div>
+
+  <h2>The evidence chain</h2>
+  <div class="evidence-chain">
+    <div class="evidence-step"><div class="box">Document generated</div></div>
+    <div class="evidence-step"><div class="box">SHA-256 hash created</div></div>
+    <div class="evidence-step"><div class="box">OpenTimestamps anchor</div></div>
+    <div class="evidence-step"><div class="box">Inspector verifies remotely</div></div>
+  </div>
+
+  <h2>Why this matters more than the document itself</h2>
+  <p>An auditor asking "how do you know this AI Literacy Policy hasn't been edited since your staff actually read it?" is a fair question. A plain PDF can't answer it. A document anchored with a cryptographic hash and a blockchain timestamp can — the proof exists independently of your own claim.</p>
+  <p>This is the same underlying infrastructure covered in depth on the <a href="https://eu-ai-act-ready.eu/rrvi.html" style="color:#ff5555;">RRVI™ Engineering Manifesto</a> — this page is the practical "what it means for you" version.</p>
+
+  <div class="faq">
+    <h2 style="margin-top:44px;">Common questions</h2>
+    <details><summary>What does "proof" mean for a compliance document?</summary><p>It means an auditor can verify a document existed in a specific state at a specific time and hasn't been altered since — not just that you say it's true.</p></details>
+    <details><summary>What is SHA-256 hashing used for here?</summary><p>Each generated document gets a unique cryptographic fingerprint (hash). If even one character changes, the hash changes completely, making tampering immediately detectable.</p></details>
+    <details><summary>What is OpenTimestamps?</summary><p>A free, open protocol that anchors a document's hash to the Bitcoin blockchain, creating an independently verifiable timestamp that doesn't depend on trusting any single company's server.</p></details>
+    <details><summary>Does this replace formal certification?</summary><p>No — it makes your evidence verifiable and inspection-ready, not certified. There is a real difference between readiness (structured, traceable, inspectable evidence) and formal third-party certification.</p></details>
+    <details><summary>What would an inspector actually see?</summary><p>A structured evidence trail: the document itself, its hash, its timestamp proof, and which module and responsible person it's tied to — reviewable remotely, without an on-site visit.</p></details>
+  </div>
+
+  <a class="cta" href="https://eu-ai-act-ready.eu/rrvi.html">Read the full RRVI™ manifesto &rarr;</a>
+</main>
+
+<footer style="max-width:900px; margin:50px auto 0; border-top:1px solid #2a2a2a; padding:28px 24px 40px; font-size:13px; color:#999;">
+  <div style="display:flex; flex-wrap:wrap; gap:28px; margin-bottom:18px;">
+    <div>
+      <div style="font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:#999; margin-bottom:10px;">Quick links</div>
+      <div><a href="https://eu-ai-act-ready.eu/" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">Home</a></div>
+      <div><a href="https://eu-ai-act-ready.eu/generator" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">Generator</a></div>
+      <div><a href="https://eu-ai-act-ready.eu/why" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">Why the EU AI Act</a></div>
+      <div><a href="https://eu-ai-act-ready.eu/roadmap" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">Roadmap</a></div>
+    </div>
+    <div>
+      <div style="font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:#999; margin-bottom:10px;">Machine Readable</div>
+      <div><a href="/robots.txt" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">robots.txt</a></div>
+      <div><a href="/llms.txt" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">llms.txt</a></div>
+      <div><a href="/sitemap.xml" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">sitemap.xml</a></div>
+    </div>
+    <div>
+      <div style="font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:#999; margin-bottom:10px;">Support</div>
+      <div><a href="https://eu-ai-act-ready.eu/ask" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">Ask EU AI Act</a></div>
+      <div><a href="https://eu-ai-act-ready.eu/contact" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">Contact</a></div>
+      <div><a href="mailto:contact@5thelement.ai" style="color:#ccc; text-decoration:none; display:block; padding:3px 0;">contact@5thelement.ai</a></div>
+    </div>
+  </div>
+  <div>&copy; 2026 AiVenture S.R.L. &mdash; EU AI Act Ready&trade;. Last updated: 26 July 2026</div>
+</footer>
+
+</body>
+</html>
