@@ -341,12 +341,20 @@ select:focus { border-color: var(--red); }
 
   <form id="rrvi-form">
     <div class="field">
-      <label for="firmName">Firm name</label>
+      <label for="email">Work email</label>
+      <input type="email" id="email" name="email" placeholder="e.g. you@yourfirm.com" required="" autocomplete="email">
+    </div>
+    <div class="field">
+      <label for="firmName">Firm legal name</label>
       <input type="text" id="firmName" name="firmName" placeholder="e.g. Acme Robotics SRL" required="" autocomplete="organization">
     </div>
     <div class="field">
-      <label for="responsiblePerson">AI Act responsible person</label>
-      <input type="text" id="responsiblePerson" name="responsiblePerson" placeholder="e.g. Maria Ionescu" required="" autocomplete="name">
+      <label for="responsibleFirstName">AI Act responsible person — first name</label>
+      <input type="text" id="responsibleFirstName" name="responsibleFirstName" placeholder="e.g. Maria" required="" autocomplete="given-name">
+    </div>
+    <div class="field">
+      <label for="responsibleLastName">AI Act responsible person — last name</label>
+      <input type="text" id="responsibleLastName" name="responsibleLastName" placeholder="e.g. Ionescu" required="" autocomplete="family-name">
     </div>
     <div class="field">
       <label for="docLang">Document language</label>
@@ -371,7 +379,7 @@ select:focus { border-color: var(--red); }
   </form>
 
   <div class="status" id="status"></div>
-  <p class="meta">Docs are generated on request — nothing is stored. Delivered as a single .zip.</p>
+  <p class="meta">Documents are generated on request and delivered as a single .zip. We keep your email, firm name, and responsible person on file so we can follow up on your compliance pack.</p>
 
   <div class="modules">
     <h2>What's inside — 10 modules × 7 doc types</h2>
@@ -428,6 +436,8 @@ select:focus { border-color: var(--red); }
 const RRVI_BASE = "https://rrvi-generator-worker-test.aipath512.workers.dev";
 const RRVI_API = RRVI_BASE + "/generate";
 const RRVI_SINGLE_API = RRVI_BASE + "/generate-one";
+// Lead capture — point this at the leads-capture Worker once deployed (see chat).
+const LEAD_API = "https://leads-capture-worker.aipath512.workers.dev/capture";
 
 // The 70 compliance documents (10 modules × 7 doc types)
 const DOCS = [{"m":"AI System Inventory","c":"CHK-001","t":"Checklist","p":"01-ai-system-inventory/CHK-001_AI_System_Inventory_Checklist.md"},{"m":"AI System Inventory","c":"DEC-001","t":"Declaration","p":"01-ai-system-inventory/DEC-001_AI_System_Inventory_Declaration.md"},{"m":"AI System Inventory","c":"DOD-001","t":"Policy","p":"01-ai-system-inventory/DOD-001_AI_System_Inventory_Policy.md"},{"m":"AI System Inventory","c":"EVID-001","t":"Evidence","p":"01-ai-system-inventory/EVID-001_AI_System_Inventory_Evidence.md"},{"m":"AI System Inventory","c":"PROC-001","t":"Procedure","p":"01-ai-system-inventory/PROC-001_AI_System_Inventory_Procedure.md"},{"m":"AI System Inventory","c":"REG-001","t":"Register","p":"01-ai-system-inventory/REG-001_AI_System_Inventory_Register.md"},{"m":"AI System Inventory","c":"WI-001","t":"Work Instruction","p":"01-ai-system-inventory/WI-001_AI_System_Inventory_Work_Instruction.md"},{"m":"Risk Classification","c":"CHK-002","t":"Checklist","p":"02-risk-classification/CHK-002_Risk_Classification_Checklist.md"},{"m":"Risk Classification","c":"DEC-002","t":"Declaration","p":"02-risk-classification/DEC-002_Risk_Classification_Declaration.md"},{"m":"Risk Classification","c":"DOD-002","t":"Policy","p":"02-risk-classification/DOD-002_Risk_Classification_Policy.md"},{"m":"Risk Classification","c":"EVID-002","t":"Evidence","p":"02-risk-classification/EVID-002_Risk_Classification_Evidence.md"},{"m":"Risk Classification","c":"PROC-002","t":"Procedure","p":"02-risk-classification/PROC-002_Risk_Classification_Procedure.md"},{"m":"Risk Classification","c":"REG-002","t":"Register","p":"02-risk-classification/REG-002_Risk_Classification_Register.md"},{"m":"Risk Classification","c":"WI-002","t":"Work Instruction","p":"02-risk-classification/WI-002_Risk_Classification_Work_Instruction.md"},{"m":"AI Literacy","c":"CHK-003","t":"Checklist","p":"03-ai-literacy/CHK-003_AI_Literacy_Checklist.md"},{"m":"AI Literacy","c":"DEC-003","t":"Declaration","p":"03-ai-literacy/DEC-003_AI_Literacy_Declaration.md"},{"m":"AI Literacy","c":"DOD-003","t":"Policy","p":"03-ai-literacy/DOD-003_AI_Literacy_Policy.md"},{"m":"AI Literacy","c":"EVID-003","t":"Evidence","p":"03-ai-literacy/EVID-003_AI_Literacy_Evidence.md"},{"m":"AI Literacy","c":"PROC-003","t":"Procedure","p":"03-ai-literacy/PROC-003_AI_Literacy_Procedure.md"},{"m":"AI Literacy","c":"REG-003","t":"Register","p":"03-ai-literacy/REG-003_AI_Literacy_Register.md"},{"m":"AI Literacy","c":"WI-003","t":"Work Instruction","p":"03-ai-literacy/WI-003_AI_Literacy_Work_Instruction.md"},{"m":"Prohibited Practices","c":"CHK-004","t":"Checklist","p":"04-prohibited-practices/CHK-004_Prohibited_Practices_Checklist.md"},{"m":"Prohibited Practices","c":"DEC-004","t":"Declaration","p":"04-prohibited-practices/DEC-004_Prohibited_Practices_Declaration.md"},{"m":"Prohibited Practices","c":"DOD-004","t":"Policy","p":"04-prohibited-practices/DOD-004_Prohibited_Practices_Policy.md"},{"m":"Prohibited Practices","c":"EVID-004","t":"Evidence","p":"04-prohibited-practices/EVID-004_Prohibited_Practices_Evidence.md"},{"m":"Prohibited Practices","c":"PROC-004","t":"Procedure","p":"04-prohibited-practices/PROC-004_Prohibited_Practices_Procedure.md"},{"m":"Prohibited Practices","c":"REG-004","t":"Register","p":"04-prohibited-practices/REG-004_Prohibited_Practices_Register.md"},{"m":"Prohibited Practices","c":"WI-004","t":"Work Instruction","p":"04-prohibited-practices/WI-004_Prohibited_Practices_Work_Instruction.md"},{"m":"High-Risk Assessment","c":"CHK-005","t":"Checklist","p":"05-high-risk-assessment/CHK-005_High_Risk_Assessment_Checklist.md"},{"m":"High-Risk Assessment","c":"DEC-005","t":"Declaration","p":"05-high-risk-assessment/DEC-005_High_Risk_Assessment_Declaration.md"},{"m":"High-Risk Assessment","c":"DOD-005","t":"Policy","p":"05-high-risk-assessment/DOD-005_High_Risk_Assessment_Policy.md"},{"m":"High-Risk Assessment","c":"EVID-005","t":"Evidence","p":"05-high-risk-assessment/EVID-005_High_Risk_Assessment_Evidence.md"},{"m":"High-Risk Assessment","c":"PROC-005","t":"Procedure","p":"05-high-risk-assessment/PROC-005_High_Risk_Assessment_Procedure.md"},{"m":"High-Risk Assessment","c":"REG-005","t":"Register","p":"05-high-risk-assessment/REG-005_High_Risk_Assessment_Register.md"},{"m":"High-Risk Assessment","c":"WI-005","t":"Work Instruction","p":"05-high-risk-assessment/WI-005_High_Risk_Assessment_Work_Instruction.md"},{"m":"Technical Documentation","c":"CHK-006","t":"Checklist","p":"06-technical-documentation/CHK-006_Technical_Documentation_Checklist.md"},{"m":"Technical Documentation","c":"DEC-006","t":"Declaration","p":"06-technical-documentation/DEC-006_Technical_Documentation_Declaration.md"},{"m":"Technical Documentation","c":"DOD-006","t":"Policy","p":"06-technical-documentation/DOD-006_Technical_Documentation_Policy.md"},{"m":"Technical Documentation","c":"EVID-006","t":"Evidence","p":"06-technical-documentation/EVID-006_Technical_Documentation_Evidence.md"},{"m":"Technical Documentation","c":"PROC-006","t":"Procedure","p":"06-technical-documentation/PROC-006_Technical_Documentation_Procedure.md"},{"m":"Technical Documentation","c":"REG-006","t":"Register","p":"06-technical-documentation/REG-006_Technical_Documentation_Register.md"},{"m":"Technical Documentation","c":"WI-006","t":"Work Instruction","p":"06-technical-documentation/WI-006_Technical_Documentation_Work_Instruction.md"},{"m":"Human Oversight","c":"CHK-007","t":"Checklist","p":"07-human-oversight/CHK-007_Human_Oversight_Checklist.md"},{"m":"Human Oversight","c":"DEC-007","t":"Declaration","p":"07-human-oversight/DEC-007_Human_Oversight_Declaration.md"},{"m":"Human Oversight","c":"DOD-007","t":"Policy","p":"07-human-oversight/DOD-007_Human_Oversight_Policy.md"},{"m":"Human Oversight","c":"EVID-007","t":"Evidence","p":"07-human-oversight/EVID-007_Human_Oversight_Evidence.md"},{"m":"Human Oversight","c":"PROC-007","t":"Procedure","p":"07-human-oversight/PROC-007_Human_Oversight_Procedure.md"},{"m":"Human Oversight","c":"REG-007","t":"Register","p":"07-human-oversight/REG-007_Human_Oversight_Register.md"},{"m":"Human Oversight","c":"WI-007","t":"Work Instruction","p":"07-human-oversight/WI-007_Human_Oversight_Work_Instruction.md"},{"m":"Data Governance","c":"CHK-008","t":"Checklist","p":"08-data-governance/CHK-008_Data_Governance_Checklist.md"},{"m":"Data Governance","c":"DEC-008","t":"Declaration","p":"08-data-governance/DEC-008_Data_Governance_Declaration.md"},{"m":"Data Governance","c":"DOD-008","t":"Policy","p":"08-data-governance/DOD-008_Data_Governance_Policy.md"},{"m":"Data Governance","c":"EVID-008","t":"Evidence","p":"08-data-governance/EVID-008_Data_Governance_Evidence.md"},{"m":"Data Governance","c":"PROC-008","t":"Procedure","p":"08-data-governance/PROC-008_Data_Governance_Procedure.md"},{"m":"Data Governance","c":"REG-008","t":"Register","p":"08-data-governance/REG-008_Data_Governance_Register.md"},{"m":"Data Governance","c":"WI-008","t":"Work Instruction","p":"08-data-governance/WI-008_Data_Governance_Work_Instruction.md"},{"m":"Logging & Monitoring","c":"CHK-009","t":"Checklist","p":"09-logging-monitoring/CHK-009_Logging_Monitoring_Checklist.md"},{"m":"Logging & Monitoring","c":"DEC-009","t":"Declaration","p":"09-logging-monitoring/DEC-009_Logging_Monitoring_Declaration.md"},{"m":"Logging & Monitoring","c":"DOD-009","t":"Policy","p":"09-logging-monitoring/DOD-009_Logging_Monitoring_Policy.md"},{"m":"Logging & Monitoring","c":"EVID-009","t":"Evidence","p":"09-logging-monitoring/EVID-009_Logging_Monitoring_Evidence.md"},{"m":"Logging & Monitoring","c":"PROC-009","t":"Procedure","p":"09-logging-monitoring/PROC-009_Logging_Monitoring_Procedure.md"},{"m":"Logging & Monitoring","c":"REG-009","t":"Register","p":"09-logging-monitoring/REG-009_Logging_Monitoring_Register.md"},{"m":"Logging & Monitoring","c":"WI-009","t":"Work Instruction","p":"09-logging-monitoring/WI-009_Logging_Monitoring_Work_Instruction.md"},{"m":"Incident Reporting","c":"CHK-010","t":"Checklist","p":"10-incident-reporting/CHK-010_Incident_Reporting_Checklist.md"},{"m":"Incident Reporting","c":"DEC-010","t":"Declaration","p":"10-incident-reporting/DEC-010_Incident_Reporting_Declaration.md"},{"m":"Incident Reporting","c":"DOD-010","t":"Policy","p":"10-incident-reporting/DOD-010_Incident_Reporting_Policy.md"},{"m":"Incident Reporting","c":"EVID-010","t":"Evidence","p":"10-incident-reporting/EVID-010_Incident_Reporting_Evidence.md"},{"m":"Incident Reporting","c":"PROC-010","t":"Procedure","p":"10-incident-reporting/PROC-010_Incident_Reporting_Procedure.md"},{"m":"Incident Reporting","c":"REG-010","t":"Register","p":"10-incident-reporting/REG-010_Incident_Reporting_Register.md"},{"m":"Incident Reporting","c":"WI-010","t":"Work Instruction","p":"10-incident-reporting/WI-010_Incident_Reporting_Work_Instruction.md"}];
@@ -466,19 +476,40 @@ document.getElementById("viewerClose").addEventListener("click", function(){
 });
 
 function currentFirmInputs(){
+  const email = document.getElementById("email").value.trim();
   const firmName = document.getElementById("firmName").value.trim();
-  const responsiblePerson = document.getElementById("responsiblePerson").value.trim();
+  const firstName = document.getElementById("responsibleFirstName").value.trim();
+  const lastName = document.getElementById("responsibleLastName").value.trim();
+  const responsiblePerson = (firstName + " " + lastName).trim();
   const format = document.getElementById("docFormat").value;
-  return { firmName, responsiblePerson, format };
+  return { email, firmName, firstName, lastName, responsiblePerson, format };
 }
 
 function requireFirmInputs(){
-  const { firmName, responsiblePerson, format } = currentFirmInputs();
-  if(!firmName || !responsiblePerson){
-    setStatus("err", "Enter your firm name and responsible person above first.");
+  const { email, firmName, firstName, lastName, responsiblePerson, format } = currentFirmInputs();
+  if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    setStatus("err", "Enter a valid work email above first.");
     return null;
   }
-  return { firmName, responsiblePerson, format };
+  if(!firmName || !firstName || !lastName){
+    setStatus("err", "Enter your firm name and the responsible person's first and last name above first.");
+    return null;
+  }
+  captureLead(email, firmName, responsiblePerson);
+  return { email, firmName, responsiblePerson, format };
+}
+
+// Fire-and-forget lead capture — does not block or fail the document flow.
+// Requires LEAD_API to be pointed at a deployed leads-capture Worker (see below).
+let leadSent = false;
+function captureLead(email, firmName, responsiblePerson){
+  if(leadSent) return;
+  leadSent = true;
+  fetch(LEAD_API, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, firmName, responsiblePerson, source: "generator" })
+  }).catch(()=>{ /* never block generation on lead-capture failure */ });
 }
 
 async function fetchSingleDoc(path, firmName, responsiblePerson, format){
@@ -624,14 +655,10 @@ askInput.addEventListener("keydown", function(e){
 form.addEventListener("submit", async function(e){
   e.preventDefault();
 
-  const firmName = document.getElementById("firmName").value.trim();
-  const responsiblePerson = document.getElementById("responsiblePerson").value.trim();
+  const inputs = requireFirmInputs();
+  if(!inputs) return;
+  const { email, firmName, responsiblePerson } = inputs;
   const docLang = document.getElementById("docLang").value;
-
-  if(!firmName || !responsiblePerson){
-    setStatus("err", "Both fields are required.");
-    return;
-  }
 
   btn.disabled = true;
   btn.textContent = "⚡ Generating…";
