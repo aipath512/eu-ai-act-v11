@@ -418,8 +418,10 @@ form.addEventListener("submit", async function(e){
   }
 
   btn.disabled = true; btn.textContent = "Sending…";
+
+  // Log to the leads database (best-effort — never blocks the actual email)
   try{
-    const res = await fetch(LEAD_API, {
+    await fetch(LEAD_API, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -428,14 +430,29 @@ form.addEventListener("submit", async function(e){
         source: "partnership-distribution" + (msg ? (" | " + msg) : "")
       })
     });
-    if(!res.ok) throw new Error("Server returned " + res.status);
-    setStatus("ok", "Thanks — we've received your application and will follow up by email shortly.");
-    form.reset();
   }catch(err){
-    setStatus("err", "Could not send (" + err.message + "). Please email contact@5thelement.ai directly instead.");
-  }finally{
-    btn.disabled = false; btn.textContent = "Send application";
+    console.error("Lead log failed (non-blocking):", err);
   }
+
+  // The actual delivery mechanism: opens the visitor's own email client with
+  // everything pre-filled, addressed to you. This is what actually reaches
+  // your inbox — the D1 log above is a record, not a notification.
+  const subject = "Partnership application — " + firmName;
+  const bodyLines = [
+    "Firm: " + firmName,
+    "Email: " + email,
+    "Estimated client packs/month: " + (usage || "(not specified)"),
+    "",
+    msg || "(no additional message)"
+  ];
+  const mailtoUrl = "mailto:contact@5thelement.ai"
+    + "?subject=" + encodeURIComponent(subject)
+    + "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+  setStatus("ok", "Opening your email client to send the application to contact@5thelement.ai — press send there to finish.");
+  window.location.href = mailtoUrl;
+  btn.disabled = false; btn.textContent = "Send application";
+  form.reset();
 });
 </script>
 </body></html>
