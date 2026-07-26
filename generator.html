@@ -316,6 +316,92 @@ select:focus { border-color: var(--red); }
           "url": "https://eu-ai-act-ready.eu/10-incident-reporting"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://eu-ai-act-ready.eu/generator#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many free document packs can I generate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two free 70-document packs per email address. A third attempt from the same email is redirected to the partnership and distribution page for firms needing more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in the 70-document pack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "10 RRVI compliance modules × 7 document types each — Checklist, Declaration, Policy, Evidence, Procedure, Register, and Work Instruction — covering AI System Inventory, Risk Classification, AI Literacy, Prohibited Practices, High-Risk Assessment, Technical Documentation, Human Oversight, Data Governance, Logging & Monitoring, and Incident Reporting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What information do I need to generate my pack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your firm's legal name, your AI Act responsible person's first and last name, and a work email — that's it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What file formats are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Markdown (.md) or Word (.docx), selectable before you generate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I browse individual documents before generating the full pack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — the document list lets you view or download any of the 70 documents individually once your firm name and responsible person are filled in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data stored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your email, firm name, and responsible person are kept so we can follow up on your compliance pack and enforce the free-tier limit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What languages are the documents available in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "English is the default working language; French and Romanian are prioritized for further rollout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after I use my 2 free generations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You're redirected to the Partnership & Distribution page, where single-firm and partner/reseller pricing is available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I regenerate my pack later if my firm details change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paid packs (Single Firm tier) can be re-generated for 12 months; the free tier is limited to 2 total generations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is the AI Act responsible person field for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The individual your organization designates as accountable for EU AI Act compliance — this name is populated into all 70 generated documents as the named responsible party."
+          }
+        }
+      ]
     }
   ]
 }
@@ -705,5 +791,56 @@ form.addEventListener("submit", async function(e){
 });
 </script>
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;fc10dcfbe72446578ab9c9d37e9ca6ba&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+<style>
+.raa-footer { max-width: 760px; margin: 50px auto 0; border-top: 1px solid #2a2a2a; padding: 28px 16px 40px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.raa-footer .cols { display: flex; flex-wrap: wrap; gap: 28px; margin-bottom: 22px; }
+.raa-footer .col h3 { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 10px; }
+.raa-footer .col a { display: block; color: #ccc; text-decoration: none; font-size: 13.5px; padding: 4px 0; }
+.raa-footer .col a:hover { color: #e02424; }
+.raa-footer .legal { font-size: 12px; color: #888; }
+.raa-footer .legal a { color: #888; text-decoration: underline; }
+.raa-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.raa-faq { max-width: 760px; margin: 40px auto 0; padding: 0 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.raa-faq h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 16px; }
+.raa-faq details { border: 1px solid #2a2a2a; border-radius: 10px; margin-bottom: 10px; overflow: hidden; background: rgb(13,13,13); }
+.raa-faq summary { list-style: none; cursor: pointer; padding: 14px 16px; font-size: 14.5px; font-weight: 700; color: #f5f5f5; display:flex; justify-content:space-between; gap:10px; }
+.raa-faq summary::-webkit-details-marker { display: none; }
+.raa-faq summary::after { content: "+"; color: #e02424; font-size: 18px; flex: 0 0 auto; }
+.raa-faq details[open] summary::after { content: "\2212"; }
+.raa-faq .a { padding: 0 16px 16px; font-size: 13.5px; color: rgb(200,200,200); line-height: 1.55; }
+</style>
+<div class="raa-faq"><h2>Frequently asked questions</h2>
+<details><summary>How many free document packs can I generate?</summary><div class="a">Two free 70-document packs per email address. A third attempt from the same email is redirected to the partnership and distribution page for firms needing more.</div></details>
+<details><summary>What&#x27;s included in the 70-document pack?</summary><div class="a">10 RRVI compliance modules × 7 document types each — Checklist, Declaration, Policy, Evidence, Procedure, Register, and Work Instruction — covering AI System Inventory, Risk Classification, AI Literacy, Prohibited Practices, High-Risk Assessment, Technical Documentation, Human Oversight, Data Governance, Logging &amp; Monitoring, and Incident Reporting.</div></details>
+<details><summary>What information do I need to generate my pack?</summary><div class="a">Your firm&#x27;s legal name, your AI Act responsible person&#x27;s first and last name, and a work email — that&#x27;s it.</div></details>
+<details><summary>What file formats are available?</summary><div class="a">Markdown (.md) or Word (.docx), selectable before you generate.</div></details>
+<details><summary>Can I browse individual documents before generating the full pack?</summary><div class="a">Yes — the document list lets you view or download any of the 70 documents individually once your firm name and responsible person are filled in.</div></details>
+<details><summary>Is my data stored?</summary><div class="a">Your email, firm name, and responsible person are kept so we can follow up on your compliance pack and enforce the free-tier limit.</div></details>
+<details><summary>What languages are the documents available in?</summary><div class="a">English is the default working language; French and Romanian are prioritized for further rollout.</div></details>
+<details><summary>What happens after I use my 2 free generations?</summary><div class="a">You&#x27;re redirected to the Partnership &amp; Distribution page, where single-firm and partner/reseller pricing is available.</div></details>
+<details><summary>Can I regenerate my pack later if my firm details change?</summary><div class="a">Paid packs (Single Firm tier) can be re-generated for 12 months; the free tier is limited to 2 total generations.</div></details>
+<details><summary>Who is the AI Act responsible person field for?</summary><div class="a">The individual your organization designates as accountable for EU AI Act compliance — this name is populated into all 70 generated documents as the named responsible party.</div></details>
+</div>
+<footer class="raa-footer">
+  <div class="cols">
+    <div class="col"><h3>Quick links</h3><a href="https://eu-ai-act-ready.eu/">Home</a>
+<a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+<a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a></div>
+    <div class="col"><h3>Support</h3><a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+<a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></div>
+  </div>
+  <div class="legal">&copy; 2026 AiVenture S.R.L. &mdash; EU AI Act Ready&trade;. <a href="https://eu-ai-act-ready.eu/">eu-ai-act-ready.eu</a></div>
+</footer>
+<nav class="raa-visually-hidden" aria-hidden="false"><a href="https://eu-ai-act-ready.eu/">Home</a>
+<a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+<a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a>
+<a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+<a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></nav>
 
 </body></html>

@@ -151,6 +151,92 @@
       "name": "RRVI™",
       "alternateName": "Remote Regulatory Verification Infrastructure",
       "description": "Architecture where a regulator sends a secure verification request directly to an organization's system, which returns structured evidence and cryptographic proof."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://eu-ai-act-ready.eu/rrvi#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does RRVI™ stand for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Remote Regulatory Verification Infrastructure — the engineering architecture behind EU AI Act Ready™."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is RRVI™ a product or an architecture?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An architectural pattern, not a product name — each word defines a specific property of how the system works."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does 'Remote' mean in RRVI™?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compliance evidence can be reviewed without an on-site visit — an inspector, auditor, or partner can verify readiness from anywhere, at any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does 'Regulatory' mean in RRVI™?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The architecture exists to serve specific regulatory obligations, not general-purpose document management — every component maps back to a specific requirement in a specific regulation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does 'Verification' mean in RRVI™?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The goal isn't producing documents — it's producing evidence that can be independently checked: cryptographically, semantically, and against the actual regulatory text."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does 'Infrastructure' mean in RRVI™?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RRVI™ is a reusable foundation, not a one-off tool — the same architecture that powers EU AI Act readiness is decoupled enough to support other regulatory domains."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What problem does RRVI™ solve that plain documents don't?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compliance evidence today is scattered across formats, folders, and departments instead of existing as one verifiable state — RRVI™ consolidates that into a traceable structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is RRVI™ specific to the EU AI Act?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — the EU AI Act is the first regulation it's built for, but the architecture is designed to extend to other regulatory domains."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is RRVI™ different from a document generator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A generator produces files; RRVI™ additionally structures how those files relate to each other and to the obligations they evidence, so the relationships themselves are verifiable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is RRVI™ built for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Organizations and their auditors, inspectors, or partners who need to verify regulatory readiness without relying on unstructured document exchange."
+          }
+        }
+      ]
     }
   ]
 }
@@ -769,6 +855,57 @@ toggle.addEventListener('click', () => {
   toggle.textContent = document.body.classList.contains('light-mode') ? '☀' : '☾';
 });
 </script>
+
+
+<style>
+.raa-footer { max-width: 760px; margin: 50px auto 0; border-top: 1px solid #2a2a2a; padding: 28px 16px 40px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.raa-footer .cols { display: flex; flex-wrap: wrap; gap: 28px; margin-bottom: 22px; }
+.raa-footer .col h3 { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 10px; }
+.raa-footer .col a { display: block; color: #ccc; text-decoration: none; font-size: 13.5px; padding: 4px 0; }
+.raa-footer .col a:hover { color: #e02424; }
+.raa-footer .legal { font-size: 12px; color: #888; }
+.raa-footer .legal a { color: #888; text-decoration: underline; }
+.raa-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.raa-faq { max-width: 760px; margin: 40px auto 0; padding: 0 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.raa-faq h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 16px; }
+.raa-faq details { border: 1px solid #2a2a2a; border-radius: 10px; margin-bottom: 10px; overflow: hidden; background: rgb(13,13,13); }
+.raa-faq summary { list-style: none; cursor: pointer; padding: 14px 16px; font-size: 14.5px; font-weight: 700; color: #f5f5f5; display:flex; justify-content:space-between; gap:10px; }
+.raa-faq summary::-webkit-details-marker { display: none; }
+.raa-faq summary::after { content: "+"; color: #e02424; font-size: 18px; flex: 0 0 auto; }
+.raa-faq details[open] summary::after { content: "\2212"; }
+.raa-faq .a { padding: 0 16px 16px; font-size: 13.5px; color: rgb(200,200,200); line-height: 1.55; }
+</style>
+<div class="raa-faq"><h2>Frequently asked questions</h2>
+<details><summary>What does RRVI™ stand for?</summary><div class="a">Remote Regulatory Verification Infrastructure — the engineering architecture behind EU AI Act Ready™.</div></details>
+<details><summary>Is RRVI™ a product or an architecture?</summary><div class="a">An architectural pattern, not a product name — each word defines a specific property of how the system works.</div></details>
+<details><summary>What does &#x27;Remote&#x27; mean in RRVI™?</summary><div class="a">Compliance evidence can be reviewed without an on-site visit — an inspector, auditor, or partner can verify readiness from anywhere, at any time.</div></details>
+<details><summary>What does &#x27;Regulatory&#x27; mean in RRVI™?</summary><div class="a">The architecture exists to serve specific regulatory obligations, not general-purpose document management — every component maps back to a specific requirement in a specific regulation.</div></details>
+<details><summary>What does &#x27;Verification&#x27; mean in RRVI™?</summary><div class="a">The goal isn&#x27;t producing documents — it&#x27;s producing evidence that can be independently checked: cryptographically, semantically, and against the actual regulatory text.</div></details>
+<details><summary>What does &#x27;Infrastructure&#x27; mean in RRVI™?</summary><div class="a">RRVI™ is a reusable foundation, not a one-off tool — the same architecture that powers EU AI Act readiness is decoupled enough to support other regulatory domains.</div></details>
+<details><summary>What problem does RRVI™ solve that plain documents don&#x27;t?</summary><div class="a">Compliance evidence today is scattered across formats, folders, and departments instead of existing as one verifiable state — RRVI™ consolidates that into a traceable structure.</div></details>
+<details><summary>Is RRVI™ specific to the EU AI Act?</summary><div class="a">No — the EU AI Act is the first regulation it&#x27;s built for, but the architecture is designed to extend to other regulatory domains.</div></details>
+<details><summary>How is RRVI™ different from a document generator?</summary><div class="a">A generator produces files; RRVI™ additionally structures how those files relate to each other and to the obligations they evidence, so the relationships themselves are verifiable.</div></details>
+<details><summary>Who is RRVI™ built for?</summary><div class="a">Organizations and their auditors, inspectors, or partners who need to verify regulatory readiness without relying on unstructured document exchange.</div></details>
+</div>
+<footer class="raa-footer">
+  <div class="cols">
+    <div class="col"><h3>Quick links</h3><a href="https://eu-ai-act-ready.eu/">Home</a>
+<a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+<a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a></div>
+    <div class="col"><h3>Support</h3><a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+<a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></div>
+  </div>
+  <div class="legal">&copy; 2026 AiVenture S.R.L. &mdash; EU AI Act Ready&trade;. <a href="https://eu-ai-act-ready.eu/">eu-ai-act-ready.eu</a></div>
+</footer>
+<nav class="raa-visually-hidden" aria-hidden="false"><a href="https://eu-ai-act-ready.eu/">Home</a>
+<a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+<a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a>
+<a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+<a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></nav>
 
 </body>
 </html>

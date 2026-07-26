@@ -141,6 +141,92 @@
       "url": "https://eu-ai-act-ready.eu/generator",
       "price": "497",
       "priceCurrency": "EUR"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://eu-ai-act-ready.eu/why#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the EU AI Act actually trying to prevent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's built around one accountability question: when an AI-driven decision or AI-generated content affects a real person, who can be held responsible for it?"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the EU AI Act ban AI-generated content?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — the EU can't and doesn't try to ban AI-generated content. Instead, it makes it legally and financially costly for a company to put unverified AI decisions or content in front of people without a human in the loop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does 'human in the loop' mean under the Act?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A human has to be able to consent to and be accountable for an AI-driven decision or piece of content before it reaches people — automation without that checkpoint is the core risk the Act targets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't an AI system itself be held liable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI system can't be fined, imprisoned, or held liable — only a human, or a legal entity represented by one, can. That's why establishing who is accountable is central to the regulation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does 'reconstructible' evidence mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It means an auditor can trace a decision or piece of content back through the chain of who validated it, at each handoff, using verifiable records — not just a written policy claiming it happened."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does EU AI Act Ready™ make evidence verifiable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Through blockchain-anchored timestamping (OpenTimestamps) on key claims, so evidence can be independently verified rather than taken on trust."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is transparency the same as traceability under the Act?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're treated as the same breadcrumb read in two directions — an auditor should be able to follow the trail from either the transparency side (what was disclosed) or the traceability side (who did what, when)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who does the EU AI Act apply to?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Providers and deployers of AI systems used in or affecting the EU market — including non-EU companies whose AI systems reach EU users."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is proof of compliance the same as proof of innocence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — regulatory inspection is administrative, not criminal. The real risk is being asked for evidence and having nothing ready, not losing a legal argument about burden of proof."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which authority enforces the EU AI Act in each country?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each EU member state designates its own market surveillance authority — for example ANCOM in Romania, BNetzA in Germany, and ACN in Italy — responsible for national oversight."
+          }
+        }
+      ]
     }
   ]
 }
@@ -592,6 +678,57 @@ document.getElementById("langSelectWhy").addEventListener("change", function(){
   applyWhyLanguage(this.value);
 });
 </script>
+
+
+<style>
+.raa-footer { max-width: 760px; margin: 50px auto 0; border-top: 1px solid #2a2a2a; padding: 28px 16px 40px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.raa-footer .cols { display: flex; flex-wrap: wrap; gap: 28px; margin-bottom: 22px; }
+.raa-footer .col h3 { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 10px; }
+.raa-footer .col a { display: block; color: #ccc; text-decoration: none; font-size: 13.5px; padding: 4px 0; }
+.raa-footer .col a:hover { color: #e02424; }
+.raa-footer .legal { font-size: 12px; color: #888; }
+.raa-footer .legal a { color: #888; text-decoration: underline; }
+.raa-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.raa-faq { max-width: 760px; margin: 40px auto 0; padding: 0 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.raa-faq h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 16px; }
+.raa-faq details { border: 1px solid #2a2a2a; border-radius: 10px; margin-bottom: 10px; overflow: hidden; background: rgb(13,13,13); }
+.raa-faq summary { list-style: none; cursor: pointer; padding: 14px 16px; font-size: 14.5px; font-weight: 700; color: #f5f5f5; display:flex; justify-content:space-between; gap:10px; }
+.raa-faq summary::-webkit-details-marker { display: none; }
+.raa-faq summary::after { content: "+"; color: #e02424; font-size: 18px; flex: 0 0 auto; }
+.raa-faq details[open] summary::after { content: "\2212"; }
+.raa-faq .a { padding: 0 16px 16px; font-size: 13.5px; color: rgb(200,200,200); line-height: 1.55; }
+</style>
+<div class="raa-faq"><h2>Frequently asked questions</h2>
+<details><summary>What is the EU AI Act actually trying to prevent?</summary><div class="a">It&#x27;s built around one accountability question: when an AI-driven decision or AI-generated content affects a real person, who can be held responsible for it?</div></details>
+<details><summary>Does the EU AI Act ban AI-generated content?</summary><div class="a">No — the EU can&#x27;t and doesn&#x27;t try to ban AI-generated content. Instead, it makes it legally and financially costly for a company to put unverified AI decisions or content in front of people without a human in the loop.</div></details>
+<details><summary>What does &#x27;human in the loop&#x27; mean under the Act?</summary><div class="a">A human has to be able to consent to and be accountable for an AI-driven decision or piece of content before it reaches people — automation without that checkpoint is the core risk the Act targets.</div></details>
+<details><summary>Why can&#x27;t an AI system itself be held liable?</summary><div class="a">An AI system can&#x27;t be fined, imprisoned, or held liable — only a human, or a legal entity represented by one, can. That&#x27;s why establishing who is accountable is central to the regulation.</div></details>
+<details><summary>What does &#x27;reconstructible&#x27; evidence mean?</summary><div class="a">It means an auditor can trace a decision or piece of content back through the chain of who validated it, at each handoff, using verifiable records — not just a written policy claiming it happened.</div></details>
+<details><summary>How does EU AI Act Ready™ make evidence verifiable?</summary><div class="a">Through blockchain-anchored timestamping (OpenTimestamps) on key claims, so evidence can be independently verified rather than taken on trust.</div></details>
+<details><summary>Is transparency the same as traceability under the Act?</summary><div class="a">They&#x27;re treated as the same breadcrumb read in two directions — an auditor should be able to follow the trail from either the transparency side (what was disclosed) or the traceability side (who did what, when).</div></details>
+<details><summary>Who does the EU AI Act apply to?</summary><div class="a">Providers and deployers of AI systems used in or affecting the EU market — including non-EU companies whose AI systems reach EU users.</div></details>
+<details><summary>Is proof of compliance the same as proof of innocence?</summary><div class="a">No — regulatory inspection is administrative, not criminal. The real risk is being asked for evidence and having nothing ready, not losing a legal argument about burden of proof.</div></details>
+<details><summary>Which authority enforces the EU AI Act in each country?</summary><div class="a">Each EU member state designates its own market surveillance authority — for example ANCOM in Romania, BNetzA in Germany, and ACN in Italy — responsible for national oversight.</div></details>
+</div>
+<footer class="raa-footer">
+  <div class="cols">
+    <div class="col"><h3>Quick links</h3><a href="https://eu-ai-act-ready.eu/">Home</a>
+<a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+<a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a></div>
+    <div class="col"><h3>Support</h3><a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+<a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></div>
+  </div>
+  <div class="legal">&copy; 2026 AiVenture S.R.L. &mdash; EU AI Act Ready&trade;. <a href="https://eu-ai-act-ready.eu/">eu-ai-act-ready.eu</a></div>
+</footer>
+<nav class="raa-visually-hidden" aria-hidden="false"><a href="https://eu-ai-act-ready.eu/">Home</a>
+<a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+<a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a>
+<a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+<a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></nav>
 
 </body>
 </html>

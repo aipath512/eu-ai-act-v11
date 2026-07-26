@@ -298,6 +298,92 @@ footer.cta a { background: var(--red); padding: 12px 26px; border-radius: 8px; t
       "price": "0",
       "priceCurrency": "EUR",
       "description": "Instant Risk Exposure Score generated from your AI System Inventory and Risk Classification modules."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://eu-ai-act-ready.eu/demo#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What can I see in the Demo without entering my own data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A complete example EU AI Act readiness pack — AI inventory, risk assessment, policies, registers, and evidence records — using sample firm data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to sign up to view the Demo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — the Demo is viewable without signup, using placeholder firm details."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the Demo different from the Generator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Demo shows a pre-filled example; the Generator produces the same document set personalized with your own firm's name and responsible person."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I download the Demo documents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Demo is intended to preview the document set and format — to get your own personalized, downloadable pack, use the Generator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What document types appear in the Demo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Registers, Evidence logs, Work Instructions, Policies, Checklists, Declarations, and Procedures across the 10 RRVI modules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Demo data real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — it uses a placeholder firm name and responsible person so you can see the document structure and content before generating your own."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many documents are in the full library shown in the Demo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "70 documents — 10 modules × 7 document types each."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the Demo to evaluate document quality before buying?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — that's its purpose: to let you review the actual document structure and language before committing to the Generator or a paid tier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Demo cover all 10 compliance modules?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — AI System Inventory, Risk Classification, AI Literacy, Prohibited Practices, High-Risk Assessment, Technical Documentation, Human Oversight, Data Governance, Logging & Monitoring, and Incident Reporting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I move from the Demo to generating my own pack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Go to the Generator page and enter your firm's legal name, responsible person, and email — the same 70-document structure shown in the Demo gets personalized with your details."
+          }
+        }
+      ]
     }
   ]
 }
@@ -721,5 +807,56 @@ document.getElementById("ask-input").addEventListener("keydown", (e) => {
 </script>
 
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;fc10dcfbe72446578ab9c9d37e9ca6ba&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+<style>
+.raa-footer { max-width: 760px; margin: 50px auto 0; border-top: 1px solid #2a2a2a; padding: 28px 16px 40px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.raa-footer .cols { display: flex; flex-wrap: wrap; gap: 28px; margin-bottom: 22px; }
+.raa-footer .col h3 { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 10px; }
+.raa-footer .col a { display: block; color: #ccc; text-decoration: none; font-size: 13.5px; padding: 4px 0; }
+.raa-footer .col a:hover { color: #e02424; }
+.raa-footer .legal { font-size: 12px; color: #888; }
+.raa-footer .legal a { color: #888; text-decoration: underline; }
+.raa-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.raa-faq { max-width: 760px; margin: 40px auto 0; padding: 0 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+.raa-faq h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 16px; }
+.raa-faq details { border: 1px solid #2a2a2a; border-radius: 10px; margin-bottom: 10px; overflow: hidden; background: rgb(13,13,13); }
+.raa-faq summary { list-style: none; cursor: pointer; padding: 14px 16px; font-size: 14.5px; font-weight: 700; color: #f5f5f5; display:flex; justify-content:space-between; gap:10px; }
+.raa-faq summary::-webkit-details-marker { display: none; }
+.raa-faq summary::after { content: "+"; color: #e02424; font-size: 18px; flex: 0 0 auto; }
+.raa-faq details[open] summary::after { content: "\2212"; }
+.raa-faq .a { padding: 0 16px 16px; font-size: 13.5px; color: rgb(200,200,200); line-height: 1.55; }
+</style>
+<div class="raa-faq"><h2>Frequently asked questions</h2>
+<details><summary>What can I see in the Demo without entering my own data?</summary><div class="a">A complete example EU AI Act readiness pack — AI inventory, risk assessment, policies, registers, and evidence records — using sample firm data.</div></details>
+<details><summary>Do I need to sign up to view the Demo?</summary><div class="a">No — the Demo is viewable without signup, using placeholder firm details.</div></details>
+<details><summary>How is the Demo different from the Generator?</summary><div class="a">The Demo shows a pre-filled example; the Generator produces the same document set personalized with your own firm&#x27;s name and responsible person.</div></details>
+<details><summary>Can I download the Demo documents?</summary><div class="a">The Demo is intended to preview the document set and format — to get your own personalized, downloadable pack, use the Generator.</div></details>
+<details><summary>What document types appear in the Demo?</summary><div class="a">Registers, Evidence logs, Work Instructions, Policies, Checklists, Declarations, and Procedures across the 10 RRVI modules.</div></details>
+<details><summary>Is the Demo data real?</summary><div class="a">No — it uses a placeholder firm name and responsible person so you can see the document structure and content before generating your own.</div></details>
+<details><summary>How many documents are in the full library shown in the Demo?</summary><div class="a">70 documents — 10 modules × 7 document types each.</div></details>
+<details><summary>Can I use the Demo to evaluate document quality before buying?</summary><div class="a">Yes — that&#x27;s its purpose: to let you review the actual document structure and language before committing to the Generator or a paid tier.</div></details>
+<details><summary>Does the Demo cover all 10 compliance modules?</summary><div class="a">Yes — AI System Inventory, Risk Classification, AI Literacy, Prohibited Practices, High-Risk Assessment, Technical Documentation, Human Oversight, Data Governance, Logging &amp; Monitoring, and Incident Reporting.</div></details>
+<details><summary>How do I move from the Demo to generating my own pack?</summary><div class="a">Go to the Generator page and enter your firm&#x27;s legal name, responsible person, and email — the same 70-document structure shown in the Demo gets personalized with your details.</div></details>
+</div>
+<footer class="raa-footer">
+  <div class="cols">
+    <div class="col"><h3>Quick links</h3><a href="https://eu-ai-act-ready.eu/">Home</a>
+<a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+<a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a></div>
+    <div class="col"><h3>Support</h3><a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+<a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></div>
+  </div>
+  <div class="legal">&copy; 2026 AiVenture S.R.L. &mdash; EU AI Act Ready&trade;. <a href="https://eu-ai-act-ready.eu/">eu-ai-act-ready.eu</a></div>
+</footer>
+<nav class="raa-visually-hidden" aria-hidden="false"><a href="https://eu-ai-act-ready.eu/">Home</a>
+<a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+<a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a>
+<a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+<a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+<a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a></nav>
 
 </body></html>
