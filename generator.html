@@ -669,8 +669,17 @@ form.addEventListener("submit", async function(e){
     const res = await fetch(RRVI_API, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ companyName: firmName, responsiblePerson, lang: docLang, format: bulkFormat })
+      body: JSON.stringify({ email, companyName: firmName, responsiblePerson, lang: docLang, format: bulkFormat })
     });
+
+    if(res.status === 403){
+      const data = await res.json().catch(() => ({}));
+      if(data && data.limited){
+        setStatus("err", "Free limit reached — redirecting you to our partnership page…");
+        setTimeout(() => { window.location.href = data.redirect || "https://eu-ai-act-ready.eu/partnership-distribution.html"; }, 1500);
+        return;
+      }
+    }
 
     if(!res.ok){
       throw new Error("Server returned " + res.status);
