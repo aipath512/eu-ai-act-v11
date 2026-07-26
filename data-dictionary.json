@@ -1,300 +1,239 @@
 {
   "system": "RRVI",
-  "version": "1.0.2",
-  "state": "00001H",
+  "version": "1.1.0",
+  "state": "00002H",
+  "last_updated": "2026-07-26",
 
-  "purpose": "Semantic data dictionary defining entities, attributes and controlled vocabulary used by the EU AI Act Compliance Management System™.",
-
+  "purpose": "Semantic data dictionary defining entities, attributes, relationships and controlled vocabulary used by the EU AI Act Compliance Management System™. Extends v1.0.2 by adding: (1) explicit bidirectional relationships with cardinalities between entities, (2) a crosswalk mapping each logical entity to the schema.org @type actually deployed in this site's JSON-LD, and (3) the site-content entities (pages, glossary terms, FAQ items) that the original v1.0.2 model did not cover.",
 
   "entities": {
 
-
     "Organization": {
-
       "definition": "Legal entity operating AI systems and responsible for compliance activities.",
-
       "attributes": {
-
-        "organization_id": {
-          "type": "identifier",
-          "required": true
-        },
-
-        "legal_name": {
-          "type": "string",
-          "required": true
-        },
-
-        "country": {
-          "type": "string",
-          "required": true
-        },
-
-        "industry": {
-          "type": "string",
-          "required": false
-        }
-
+        "organization_id": { "type": "identifier", "required": true },
+        "legal_name": { "type": "string", "required": true },
+        "country": { "type": "string", "required": true },
+        "industry": { "type": "string", "required": false }
       }
-
     },
-
 
     "AI_System": {
-
       "definition": "Machine-based system capable of generating outputs such as predictions, recommendations, decisions or content.",
-
       "attributes": {
-
-        "ai_system_id": {
-          "type": "identifier",
-          "required": true
-        },
-
-        "name": {
-          "type": "string",
-          "required": true
-        },
-
-        "provider": {
-          "type": "string",
-          "required": false
-        },
-
-        "model_version": {
-          "type": "string",
-          "required": false
-        },
-
-        "lifecycle_status": {
-          "type": "enum",
-          "values": [
-            "design",
-            "development",
-            "deployment",
-            "operation",
-            "retired"
-          ]
-        }
-
+        "ai_system_id": { "type": "identifier", "required": true },
+        "name": { "type": "string", "required": true },
+        "provider": { "type": "string", "required": false },
+        "model_version": { "type": "string", "required": false },
+        "lifecycle_status": { "type": "enum", "values": ["design", "development", "deployment", "operation", "retired"] }
       }
-
     },
-
 
     "AI_Use_Case": {
-
       "definition": "Business scenario where an AI system is applied.",
-
       "attributes": {
-
-        "use_case_id": {
-          "type": "identifier",
-          "required": true
-        },
-
-        "name": {
-          "type": "string",
-          "required": true
-        },
-
-        "business_process": {
-          "type": "string",
-          "required": true
-        }
-
+        "use_case_id": { "type": "identifier", "required": true },
+        "name": { "type": "string", "required": true },
+        "business_process": { "type": "string", "required": true }
       }
-
     },
-
 
     "Risk_Category": {
-
       "definition": "EU AI Act risk classification.",
-
-      "values": [
-
-        "prohibited",
-
-        "high-risk",
-
-        "limited",
-
-        "minimal"
-
-      ]
-
+      "values": ["prohibited", "high-risk", "limited", "minimal"]
     },
-
 
     "Module": {
-
-      "definition": "EU AI Act compliance domain.",
-
+      "definition": "EU AI Act compliance domain — one of the 10 operational modules.",
       "attributes": {
-
-        "module_id": {
-          "type": "identifier",
-          "required": true
-        },
-
-        "name": {
-          "type": "string",
-          "required": true
-        },
-
-        "status": {
-          "type": "enum",
-          "values": [
-            "planned",
-            "active",
-            "completed",
-            "reviewed"
-          ]
-        }
-
+        "module_id": { "type": "identifier", "required": true },
+        "name": { "type": "string", "required": true },
+        "status": { "type": "enum", "values": ["planned", "active", "completed", "reviewed"] }
       }
-
     },
-
 
     "Document": {
-
-      "definition": "Controlled compliance document.",
-
+      "definition": "Controlled compliance document — one of 7 types per module.",
       "attributes": {
-
-        "document_id": {
-          "type": "identifier",
-          "required": true
-        },
-
-        "title": {
-          "type": "string",
-          "required": true
-        },
-
-        "document_type": {
-          "type": "enum",
-          "values": [
-            "Policy",
-            "Procedure",
-            "Work Instruction",
-            "Checklist",
-            "Register",
-            "Evidence",
-            "Declaration"
-          ]
-        },
-
-        "version": {
-          "type": "string",
-          "required": true
-        },
-
-        "sha256": {
-          "type": "hash",
-          "required": false
-        }
-
+        "document_id": { "type": "identifier", "required": true },
+        "title": { "type": "string", "required": true },
+        "document_type": { "type": "enum", "values": ["Policy", "Procedure", "Work Instruction", "Checklist", "Register", "Evidence", "Declaration"] },
+        "version": { "type": "string", "required": true },
+        "sha256": { "type": "hash", "required": false }
       }
-
     },
-
 
     "Evidence": {
-
       "definition": "Proof object supporting compliance activities.",
-
       "attributes": {
-
-        "evidence_id": {
-          "type": "identifier",
-          "required": true
-        },
-
-        "description": {
-          "type": "string",
-          "required": true
-        },
-
-        "source": {
-          "type": "string",
-          "required": false
-        },
-
-        "timestamp": {
-          "type": "datetime",
-          "required": false
-        }
-
+        "evidence_id": { "type": "identifier", "required": true },
+        "description": { "type": "string", "required": true },
+        "source": { "type": "string", "required": false },
+        "timestamp": { "type": "datetime", "required": false }
       }
-
     },
 
-
     "Incident": {
-
       "definition": "Operational event affecting AI system compliance or performance.",
-
       "attributes": {
-
-        "incident_id": {
-          "type": "identifier",
-          "required": true
-        },
-
-        "severity": {
-          "type": "enum",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "critical"
-          ]
-        },
-
-        "status": {
-          "type": "enum",
-          "values": [
-            "open",
-            "investigating",
-            "resolved"
-          ]
-        }
-
+        "incident_id": { "type": "identifier", "required": true },
+        "severity": { "type": "enum", "values": ["low", "medium", "high", "critical"] },
+        "status": { "type": "enum", "values": ["open", "investigating", "resolved"] }
       }
+    },
 
+    "Page": {
+      "definition": "A single published URL on eu-ai-act-ready.eu. New in v1.1.0 — connects the logical compliance model above to the actual deployed website.",
+      "attributes": {
+        "page_id": { "type": "identifier", "required": true, "example": "https://eu-ai-act-ready.eu/generator" },
+        "title": { "type": "string", "required": true },
+        "canonical_url": { "type": "url", "required": true }
+      }
+    },
+
+    "GlossaryTerm": {
+      "definition": "A defined term used throughout the EU AI Act Compliance Management System, published on the Glossary page.",
+      "attributes": {
+        "term_id": { "type": "identifier", "required": true },
+        "name": { "type": "string", "required": true },
+        "definition_text": { "type": "string", "required": true }
+      }
+    },
+
+    "FAQItem": {
+      "definition": "A single question/answer pair, published visibly on a page and mirrored in that page's FAQPage JSON-LD.",
+      "attributes": {
+        "faq_id": { "type": "identifier", "required": true },
+        "question": { "type": "string", "required": true },
+        "answer": { "type": "string", "required": true }
+      }
     }
 
   },
 
+  "relationships": [
+    {
+      "from": "Organization",
+      "to": "AI_System",
+      "cardinality": "1:N",
+      "forward_label": "operates",
+      "reverse_label": "operated_by",
+      "note": "One organization can operate many AI systems; each AI system is operated by exactly one organization in this model."
+    },
+    {
+      "from": "AI_System",
+      "to": "AI_Use_Case",
+      "cardinality": "1:N",
+      "forward_label": "applied_in",
+      "reverse_label": "uses_system",
+      "note": "One AI system may be applied across multiple use cases."
+    },
+    {
+      "from": "AI_System",
+      "to": "Risk_Category",
+      "cardinality": "N:1",
+      "forward_label": "classified_as",
+      "reverse_label": "classifies",
+      "note": "Many AI systems can share one risk category; each AI system has exactly one active classification at a time."
+    },
+    {
+      "from": "Organization",
+      "to": "Module",
+      "cardinality": "1:N",
+      "forward_label": "implements",
+      "reverse_label": "implemented_by",
+      "note": "One organization works through all 10 modules; a module definition itself is shared/reused across organizations (module content is the same, module STATUS is per-organization)."
+    },
+    {
+      "from": "Module",
+      "to": "Document",
+      "cardinality": "1:N",
+      "forward_label": "contains",
+      "reverse_label": "belongs_to",
+      "note": "Each module contains exactly 7 documents (one per document_type). This is a fixed 1:7 cardinality, not open-ended."
+    },
+    {
+      "from": "Document",
+      "to": "Evidence",
+      "cardinality": "1:N",
+      "forward_label": "supported_by",
+      "reverse_label": "supports",
+      "note": "A single document (particularly an Evidence-type or Register-type document) can reference multiple underlying evidence records."
+    },
+    {
+      "from": "AI_System",
+      "to": "Incident",
+      "cardinality": "1:N",
+      "forward_label": "has_incident",
+      "reverse_label": "affects_system",
+      "note": "One AI system may have zero or many incidents logged against it over its lifecycle."
+    },
+    {
+      "from": "Incident",
+      "to": "Evidence",
+      "cardinality": "1:N",
+      "forward_label": "documented_by",
+      "reverse_label": "documents",
+      "note": "An incident's investigation and resolution is documented by one or more evidence records."
+    },
+    {
+      "from": "Organization",
+      "to": "Page",
+      "cardinality": "1:N",
+      "forward_label": "generates",
+      "reverse_label": "generated_for",
+      "note": "One requesting organization's data (firm name, responsible person) populates many generated document pages/files via the Generator."
+    },
+    {
+      "from": "Page",
+      "to": "FAQItem",
+      "cardinality": "1:N",
+      "forward_label": "displays",
+      "reverse_label": "displayed_on",
+      "note": "A page may display zero or many FAQ items; each FAQ item is authored for exactly one page (no cross-page sharing in the current implementation)."
+    },
+    {
+      "from": "Page",
+      "to": "Page",
+      "cardinality": "N:M",
+      "forward_label": "links_to",
+      "reverse_label": "linked_from",
+      "note": "Pages link to each other via breadcrumb, footer quick links, and in-content navigation — self-referencing many-to-many relationship."
+    },
+    {
+      "from": "GlossaryTerm",
+      "to": "Module",
+      "cardinality": "N:M",
+      "forward_label": "used_in",
+      "reverse_label": "uses_term",
+      "note": "A glossary term (e.g. 'AI System', 'High-Risk') may be relevant to multiple modules; a module's documents may use multiple glossary terms."
+    }
+  ],
+
+  "schema_org_crosswalk": {
+    "purpose": "Maps each logical entity above to the schema.org @type actually emitted in this site's live JSON-LD, so the correspondence between the conceptual model and the deployed markup is explicit and auditable rather than assumed.",
+    "mappings": [
+      { "entity": "Organization", "schema_org_type": "Organization", "deployed_on": "all 48 pages, @id https://eu-ai-act-ready.eu/#organization" },
+      { "entity": "Page", "schema_org_type": "WebPage", "deployed_on": "per-page, @id {page_url}#page" },
+      { "entity": "Page (site root)", "schema_org_type": "WebSite", "deployed_on": "all pages, @id https://eu-ai-act-ready.eu/#website" },
+      { "entity": "Page-to-Page navigation", "schema_org_type": "BreadcrumbList", "deployed_on": "47 of 48 pages (all except index.html), @id {page_url}#breadcrumb" },
+      { "entity": "FAQItem (grouped per page)", "schema_org_type": "FAQPage", "deployed_on": "index.html and the 8 product pages (generator, why, ask, rrvi, demo, roadmap, help, how-to), plus partnership-distribution.html and guide.html" },
+      { "entity": "FAQItem (individual)", "schema_org_type": "Question / Answer", "deployed_on": "nested inside each FAQPage's mainEntity array" },
+      { "entity": "Module", "schema_org_type": "CreativeWork", "deployed_on": "the 10 numbered module pages (01-ai-system-inventory.html etc.), @id {page_url}#module" },
+      { "entity": "Document (offer-level, not per-instance)", "schema_org_type": "Offer / OfferCatalog", "deployed_on": "index.html #offer-pack-generator, #offer-rrvi, #offer-diy, #offer-help, #offer-dfy" },
+      { "entity": "AI_System / compliance service", "schema_org_type": "Service", "deployed_on": "index.html #compliance-service, #rrvi-service" },
+      { "entity": "Organization founder", "schema_org_type": "Person", "deployed_on": "all pages carrying the Organization block, @id https://eu-ai-act-ready.eu/#founder" },
+      { "entity": "Organization contact", "schema_org_type": "ContactPoint", "deployed_on": "all pages carrying the Organization block, @id https://eu-ai-act-ready.eu/#contact" },
+      { "entity": "GlossaryTerm", "schema_org_type": "NOT YET IMPLEMENTED as DefinedTerm/DefinedTermSet", "deployed_on": "glossary.html currently has generic WebPage schema only — the individual terms are not marked up as DefinedTerm entities yet" }
+    ],
+    "known_gaps": [
+      "GlossaryTerm entities exist as visible content on glossary.html but are not yet marked up individually with schema.org DefinedTerm/DefinedTermSet — this is the one real remaining gap between the logical model and deployed markup.",
+      "The AI_System, AI_Use_Case, Risk_Category, Incident entities describe the RRVI *product's* data model (what a customer's own compliance data looks like once they use the system) — they are not expected to appear in this site's own JSON-LD, since they describe customer data, not site content. Listed here for completeness of the logical model only."
+    ]
+  },
 
   "controlled_vocabulary": {
-
-
-    "document_types": [
-
-      "Policy",
-      "Procedure",
-      "Work Instruction",
-      "Checklist",
-      "Register",
-      "Evidence",
-      "Declaration"
-
-    ],
-
-
-    "risk_categories": [
-
-      "prohibited",
-      "high-risk",
-      "limited",
-      "minimal"
-
-    ]
-
+    "document_types": ["Policy", "Procedure", "Work Instruction", "Checklist", "Register", "Evidence", "Declaration"],
+    "risk_categories": ["prohibited", "high-risk", "limited", "minimal"]
   }
-
 }
