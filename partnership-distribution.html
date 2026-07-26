@@ -5,7 +5,7 @@
 
 * { box-sizing: border-box; margin: 0px; padding: 0px; }
 
-body { background: var(--bg); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; min-height: 100vh; padding: 24px 16px 60px; }
+body { background: var(--bg); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; min-height: 100vh; padding: 24px 16px 0; }
 
 .top { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
 
@@ -40,7 +40,7 @@ h1 span { color: var(--red-bright); }
 .tier li { font-size: 13.5px; color: rgb(210,210,210); padding: 5px 0; padding-left: 20px; position: relative; }
 .tier li::before { content: "✓"; position: absolute; left: 0; color: var(--red-bright); font-weight: 800; }
 
-.btn { display: block; width: 100%; text-align: center; text-decoration: none; background: var(--red-bright); color: rgb(255, 255, 255); border-radius: 10px; font-size: 15.5px; font-weight: 800; padding: 14px 18px; cursor: pointer; }
+.btn { display: block; width: 100%; text-align: center; text-decoration: none; background: var(--red-bright); color: rgb(255, 255, 255); border-radius: 10px; font-size: 15.5px; font-weight: 800; padding: 14px 18px; cursor: pointer; border: none; font-family: inherit; }
 .btn:active { background: var(--red); }
 .btn.ghost { background: transparent; border: 1px solid var(--border); color: var(--white); }
 
@@ -59,11 +59,198 @@ textarea { resize: vertical; min-height: 90px; }
 .formbox { border-top: 1px solid var(--border); padding-top: 28px; margin-top: 8px; }
 .formbox h2 { font-size: 20px; margin-bottom: 8px; }
 .formbox .subtext { color: var(--grey); font-size: 14px; margin-bottom: 22px; }
+
+.faq { border-top: 1px solid var(--border); padding-top: 28px; margin-top: 40px; }
+.faq h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); margin-bottom: 16px; }
+.faq details { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; background: rgb(13,13,13); }
+.faq summary { list-style: none; cursor: pointer; padding: 14px 16px; font-size: 14.5px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--red-bright); font-size: 18px; flex: 0 0 auto; }
+.faq details[open] summary::after { content: "−"; }
+.faq .a { padding: 0 16px 16px; font-size: 13.5px; color: rgb(200,200,200); line-height: 1.55; }
+
+footer.site-footer { max-width: 640px; margin: 50px auto 0; border-top: 1px solid var(--border); padding: 28px 0 40px; }
+footer.site-footer .cols { display: flex; flex-wrap: wrap; gap: 28px; margin-bottom: 22px; }
+footer.site-footer .col h3 { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); margin-bottom: 10px; }
+footer.site-footer .col a { display: block; color: rgb(200,200,200); text-decoration: none; font-size: 13.5px; padding: 4px 0; }
+footer.site-footer .col a:hover { color: var(--red-bright); }
+footer.site-footer .legal { font-size: 12px; color: var(--grey); }
+footer.site-footer .legal a { color: var(--grey); text-decoration: underline; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Partnership & Distribution — EU AI Act Ready™</title>
-<meta name="description" content="Beyond the free trial — partnership and distribution options for firms, consultancies and platforms who need EU AI Act RRVI compliance packs at scale.">
+<title>Partnership & Distribution — EU AI Act Ready™ RRVI Packs</title>
+
+<meta name="description" content="Reselling or generating RRVI compliance packs for multiple clients? See partner and distribution pricing for the EU AI Act Ready™ 70-document generator.">
 <link rel="canonical" href="https://eu-ai-act-ready.eu/partnership-distribution.html">
+
+<meta property="og:title" content="Partnership & Distribution — EU AI Act Ready™">
+<meta property="og:description" content="Volume pricing, white-label, and reseller options for consultancies distributing EU AI Act RRVI compliance packs to multiple clients.">
+<meta property="og:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+<meta property="og:url" content="https://eu-ai-act-ready.eu/partnership-distribution.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EU AI Act Ready™">
+<meta property="og:locale" content="en_EU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Partnership & Distribution — EU AI Act Ready™">
+<meta name="twitter:description" content="Volume pricing, white-label, and reseller options for consultancies distributing EU AI Act RRVI compliance packs to multiple clients.">
+<meta name="twitter:image" content="https://eu-ai-act-ready.eu/assets/logo/og-image.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready",
+      "inLanguage": ["en", "fr", "de", "es", "it", "ro", "pl"],
+      "publisher": { "@id": "https://eu-ai-act-ready.eu/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://eu-ai-act-ready.eu/#organization",
+      "name": "EU AI Act Ready™",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://eu-ai-act-ready.eu/",
+      "logo": { "@type": "ImageObject", "url": "https://eu-ai-act-ready.eu/assets/logo.png" },
+      "founder": { "@id": "https://eu-ai-act-ready.eu/#founder" },
+      "contactPoint": { "@id": "https://eu-ai-act-ready.eu/#contact" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://eu-ai-act-ready.eu/#founder",
+      "name": "Dan Ionescu",
+      "jobTitle": "Founder",
+      "worksFor": { "@id": "https://eu-ai-act-ready.eu/#organization" }
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://eu-ai-act-ready.eu/#contact",
+      "contactType": "customer support",
+      "email": "contact@5thelement.ai",
+      "availableLanguage": ["en", "fr", "de", "es", "it", "ro", "pl"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://eu-ai-act-ready.eu/partnership-distribution.html#page",
+      "url": "https://eu-ai-act-ready.eu/partnership-distribution.html",
+      "name": "Partnership & Distribution — EU AI Act Ready™ RRVI Packs",
+      "description": "Reselling or generating RRVI compliance packs for multiple clients? See partner and distribution pricing for the EU AI Act Ready™ 70-document generator.",
+      "isPartOf": { "@id": "https://eu-ai-act-ready.eu/#website" },
+      "about": { "@id": "https://eu-ai-act-ready.eu/#organization" },
+      "inLanguage": "en",
+      "breadcrumb": { "@id": "https://eu-ai-act-ready.eu/partnership-distribution.html#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://eu-ai-act-ready.eu/partnership-distribution.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/" },
+        { "@type": "ListItem", "position": 2, "name": "Generator", "item": "https://eu-ai-act-ready.eu/generator" },
+        { "@type": "ListItem", "position": 3, "name": "Partnership", "item": "https://eu-ai-act-ready.eu/partnership-distribution.html" }
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://eu-ai-act-ready.eu/partnership-distribution.html#footernav",
+      "name": ["Home", "Generator", "Why the EU AI Act", "Roadmap", "Ask EU AI Act", "Contact"],
+      "url": [
+        "https://eu-ai-act-ready.eu/",
+        "https://eu-ai-act-ready.eu/generator",
+        "https://eu-ai-act-ready.eu/why",
+        "https://eu-ai-act-ready.eu/roadmap",
+        "https://eu-ai-act-ready.eu/ask",
+        "https://eu-ai-act-ready.eu/contact"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://eu-ai-act-ready.eu/partnership-distribution.html#service",
+      "name": "RRVI Compliance Pack — Partner & Distribution Tier",
+      "serviceType": "Volume-licensed generation of firm-personalized EU AI Act RRVI compliance documentation for consultancies, agencies and platforms serving multiple clients",
+      "provider": { "@id": "https://eu-ai-act-ready.eu/#organization" },
+      "areaServed": "EU",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Single firm pack",
+          "price": "149",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Partner / Distribution",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "description": "Custom volume pricing, quoted per application"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://eu-ai-act-ready.eu/partnership-distribution.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is the free generator limited to 2 packs per email?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The free tier is meant for a single firm to test its own compliance pack end to end — not for agencies generating packs for many different clients under one email. Two free generations are enough to evaluate the document quality and format before deciding whether to buy a single pack or apply as a partner." }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in the Single Firm pack (€149)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "All 70 RRVI compliance documents (10 modules × 7 document types — Checklist, Declaration, Policy, Evidence, Procedure, Register, Work Instruction), personalized with your firm's legal name and AI Act responsible person, delivered in Markdown or Word format, with the ability to re-generate the same pack anytime for 12 months." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is the Partner / Distribution tier for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Consultancies, law firms, and platforms that need to generate RRVI packs for multiple client firms on an ongoing basis, rather than a single firm generating its own pack once." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is white-labeling available?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — partners can apply their own branding to the generated documents instead of the EU AI Act Ready™ branding, as part of the Partner / Distribution tier." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is partner pricing structured?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Partner pricing is custom and volume-based, quoted after you apply through the partnership form with an estimate of how many client packs you expect to generate per month." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a minimum client volume to qualify as a partner?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There's no fixed published minimum — pricing is quoted individually based on the volume and use case described in your application." }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast is a partnership application reviewed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Applications submitted through the form on this page are followed up by email directly from the EU AI Act Ready™ team." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do partners get priority document generation?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — the Partner / Distribution tier removes per-client generation caps and is prioritized over the free trial tier." }
+        },
+        {
+          "@type": "Question",
+          "name": "What format are the compliance documents delivered in?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Markdown (.md) or Word (.docx), selectable per generation, for both the Single Firm and Partner tiers." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who do I contact about partnership or distribution?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Use the application form on this page, or email contact@5thelement.ai directly." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -129,7 +316,83 @@ textarea { resize: vertical; min-height: 90px; }
     </form>
     <div class="status" id="pStatus"></div>
   </div>
+
+  <div class="faq">
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Why is the free generator limited to 2 packs per email?<span></span></summary>
+      <div class="a">The free tier is meant for a single firm to test its own compliance pack end to end — not for agencies generating packs for many different clients under one email. Two free generations are enough to evaluate the document quality and format before deciding whether to buy a single pack or apply as a partner.</div>
+    </details>
+    <details>
+      <summary>What's included in the Single Firm pack (€149)?<span></span></summary>
+      <div class="a">All 70 RRVI compliance documents (10 modules × 7 document types — Checklist, Declaration, Policy, Evidence, Procedure, Register, Work Instruction), personalized with your firm's legal name and AI Act responsible person, delivered in Markdown or Word format, with the ability to re-generate the same pack anytime for 12 months.</div>
+    </details>
+    <details>
+      <summary>Who is the Partner / Distribution tier for?<span></span></summary>
+      <div class="a">Consultancies, law firms, and platforms that need to generate RRVI packs for multiple client firms on an ongoing basis, rather than a single firm generating its own pack once.</div>
+    </details>
+    <details>
+      <summary>Is white-labeling available?<span></span></summary>
+      <div class="a">Yes — partners can apply their own branding to the generated documents instead of the EU AI Act Ready™ branding, as part of the Partner / Distribution tier.</div>
+    </details>
+    <details>
+      <summary>How is partner pricing structured?<span></span></summary>
+      <div class="a">Partner pricing is custom and volume-based, quoted after you apply through the partnership form with an estimate of how many client packs you expect to generate per month.</div>
+    </details>
+    <details>
+      <summary>Is there a minimum client volume to qualify as a partner?<span></span></summary>
+      <div class="a">There's no fixed published minimum — pricing is quoted individually based on the volume and use case described in your application.</div>
+    </details>
+    <details>
+      <summary>How fast is a partnership application reviewed?<span></span></summary>
+      <div class="a">Applications submitted through the form on this page are followed up by email directly from the EU AI Act Ready™ team.</div>
+    </details>
+    <details>
+      <summary>Do partners get priority document generation?<span></span></summary>
+      <div class="a">Yes — the Partner / Distribution tier removes per-client generation caps and is prioritized over the free trial tier.</div>
+    </details>
+    <details>
+      <summary>What format are the compliance documents delivered in?<span></span></summary>
+      <div class="a">Markdown (.md) or Word (.docx), selectable per generation, for both the Single Firm and Partner tiers.</div>
+    </details>
+    <details>
+      <summary>Who do I contact about partnership or distribution?<span></span></summary>
+      <div class="a">Use the application form on this page, or email <a href="mailto:contact@5thelement.ai" style="color:inherit;">contact@5thelement.ai</a> directly.</div>
+    </details>
+  </div>
 </div>
+
+<footer class="site-footer">
+  <div class="wrap" style="max-width:none;">
+    <div class="cols">
+      <div class="col">
+        <h3>Quick links</h3>
+        <a href="https://eu-ai-act-ready.eu/">Home</a>
+        <a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+        <a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+        <a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a>
+      </div>
+      <div class="col">
+        <h3>Support</h3>
+        <a href="https://eu-ai-act-ready.eu/ask">Ask EU AI Act</a>
+        <a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+        <a href="mailto:contact@5thelement.ai">contact@5thelement.ai</a>
+      </div>
+    </div>
+    <div class="legal">
+      © 2026 AiVenture S.R.L. — EU AI Act Ready™. <a href="https://eu-ai-act-ready.eu/">eu-ai-act-ready.eu</a>
+    </div>
+  </div>
+  <!-- Visually hidden nav: same links, present for assistive tech / crawlers even if CSS fails to load -->
+  <nav class="visually-hidden" aria-hidden="false">
+    <a href="https://eu-ai-act-ready.eu/">Home</a>
+    <a href="https://eu-ai-act-ready.eu/generator">Generator</a>
+    <a href="https://eu-ai-act-ready.eu/why">Why the EU AI Act</a>
+    <a href="https://eu-ai-act-ready.eu/roadmap">Roadmap</a>
+    <a href="https://eu-ai-act-ready.eu/contact">Contact</a>
+  </nav>
+</footer>
 
 <script>
 const LEAD_API = "https://leads-capture-worker.aipath512.workers.dev/capture";
