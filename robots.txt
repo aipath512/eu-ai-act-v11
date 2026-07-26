@@ -124,3 +124,13 @@ Disallow: /functions/
 Disallow: /tmp/
 Disallow: /test/
 Disallow: /draft/
+
+# Orphan page-fragment files — not standalone pages, meant to be embedded
+# inside other pages. Broken/incomplete when visited directly.
+Disallow: /stats-bar
+Disallow: /testimonials
+Disallow: /proof-section
+Disallow: /closing-cta
+Disallow: /comparison-table
+Disallow: /new-hero-section
+Disallow: /outcomes-list-block
