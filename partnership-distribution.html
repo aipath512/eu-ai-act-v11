@@ -521,6 +521,7 @@ footer.site-footer .legal a { color: var(--grey); text-decoration: underline; }
 
 <script>
 const LEAD_API = "https://leads-capture-worker.aipath512.workers.dev/capture";
+const EMAIL_API = "https://partnership-email-worker.aipath512.workers.dev/send";
 const form = document.getElementById("partner-application");
 const btn = document.getElementById("pBtn");
 const statusEl = document.getElementById("pStatus");
@@ -584,49 +585,27 @@ form.addEventListener("submit", async function(e){
     console.error("Lead log failed (non-blocking):", err);
   }
 
-  // The actual delivery mechanism: opens the visitor's own email client with
-  // everything pre-filled, addressed to you. This is what actually reaches
-  // your inbox — the D1 log above is a record, not a notification.
-  const subject = "Partnership application — " + data.firmName;
-  const bodyLines = [
-    "FIRM BASICS",
-    "Firm: " + data.firmName,
-    "Email: " + data.email,
-    "Country: " + (data.country || "-"),
-    "Region: " + (data.region || "-"),
-    "Website: " + (data.website || "-"),
-    "Service category: " + (data.category || "-"),
-    "",
-    "COMMERCIAL POTENTIAL",
-    "Expected packs/month: " + (data.packsPerMonth || "-"),
-    "Avg contract value: " + (data.dealSize || "-"),
-    "Partnership type: " + (data.motion || "-"),
-    "Current client base: " + (data.clientBase || "-"),
-    "",
-    "COMPLIANCE PROFILE",
-    "Industries served: " + (data.industries || "-"),
-    "AI systems sold/implemented: " + (data.aiCategories || "-"),
-    "Internal AI governance role: " + (data.govContact || "-"),
-    "",
-    "OPERATIONAL READINESS",
-    "Services offered: " + (data.serviceType || "-"),
-    "Deployment preference: " + (data.deployment || "-"),
-    "API/webhook capable: " + data.apiCapable,
-    "",
-    "RELATIONSHIP SIGNALS",
-    "Wants pricing/margin sheet: " + data.pricingSheet,
-    "Interested in co-marketing: " + data.coMarketing,
-    "",
-    "Message: " + (data.msg || "(none)")
-  ];
-  const mailtoUrl = "mailto:contact@5thelement.ai"
-    + "?subject=" + encodeURIComponent(subject)
-    + "&body=" + encodeURIComponent(bodyLines.join("\n"));
-
-  setStatus("ok", "Opening your email client to send the application to contact@5thelement.ai — press send there to finish.");
-  window.location.href = mailtoUrl;
-  btn.disabled = false; btn.textContent = "Send application";
-  form.reset();
+  // The actual delivery mechanism: a real server-side email sent via
+  // Resend, through the partnership-email-worker. No visitor action
+  // required — this is what actually lands in the inbox automatically.
+  try{
+    const res = await fetch(EMAIL_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json().catch(() => ({}));
+    if(!res.ok || !result.ok){
+      throw new Error((result && result.error) ? JSON.stringify(result.error) : ("Server returned " + res.status));
+    }
+    setStatus("ok", "Application sent — we'll follow up by email shortly.");
+    form.reset();
+  }catch(err){
+    console.error("Email send failed:", err);
+    setStatus("err", "Could not send automatically (" + err.message + "). Please email contact@5thelement.ai directly instead.");
+  }finally{
+    btn.disabled = false; btn.textContent = "Send application";
+  }
 });
 </script>
 </body></html>
