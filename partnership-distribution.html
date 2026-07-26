@@ -59,6 +59,13 @@ textarea { resize: vertical; min-height: 90px; }
 .formbox { border-top: 1px solid var(--border); padding-top: 28px; margin-top: 8px; }
 .formbox h2 { font-size: 20px; margin-bottom: 8px; }
 .formbox .subtext { color: var(--grey); font-size: 14px; margin-bottom: 22px; }
+.form-section-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--red-bright); font-weight: 800; margin: 28px 0 14px; }
+.form-section-label:first-child { margin-top: 0; }
+.field-row { display: flex; gap: 14px; }
+.field-row .field { flex: 1; }
+@media (max-width: 560px) { .field-row { flex-direction: column; gap: 0; } }
+.checkbox-field label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--white); text-transform: none; letter-spacing: normal; font-weight: 500; cursor: pointer; }
+.checkbox-field input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--red-bright); cursor: pointer; }
 
 .faq { border-top: 1px solid var(--border); padding-top: 28px; margin-top: 40px; }
 .faq h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--grey); margin-bottom: 16px; }
@@ -296,22 +303,130 @@ footer.site-footer .legal a { color: var(--grey); text-decoration: underline; }
     <p class="subtext">Tell us about your firm and how you plan to use the RRVI packs — we'll follow up by email.</p>
 
     <form id="partner-application">
+
+      <div class="form-section-label">Firm basics</div>
       <div class="field">
-        <label for="pEmail">Work email</label>
+        <label for="pEmail">Work email (business domain)</label>
         <input type="email" id="pEmail" name="pEmail" placeholder="e.g. you@yourfirm.com" required autocomplete="email">
       </div>
       <div class="field">
-        <label for="pFirm">Firm / organisation name</label>
+        <label for="pFirm">Firm / organisation legal name</label>
         <input type="text" id="pFirm" name="pFirm" placeholder="e.g. Acme Consulting SRL" required autocomplete="organization">
       </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="pCountry">Country</label>
+          <input type="text" id="pCountry" name="pCountry" placeholder="e.g. Romania" autocomplete="country-name">
+        </div>
+        <div class="field">
+          <label for="pRegion">Main region of operation</label>
+          <input type="text" id="pRegion" name="pRegion" placeholder="e.g. EU, Balkans, Nordics">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="pWebsite">Website URL</label>
+          <input type="text" id="pWebsite" name="pWebsite" placeholder="e.g. acmeconsulting.com" autocomplete="url">
+        </div>
+        <div class="field">
+          <label for="pCategory">Main service category</label>
+          <select id="pCategory" name="pCategory">
+            <option value="">Select one</option>
+            <option>Accounting / Tax</option>
+            <option>Legal</option>
+            <option>IT Consulting</option>
+            <option>Management Consulting</option>
+            <option>HR / Recruiting</option>
+            <option>Marketing Agency</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-section-label">Commercial potential</div>
+      <div class="field-row">
+        <div class="field">
+          <label for="pUse">Expected client packs per month</label>
+          <select id="pUse" name="pUse">
+            <option value="">Select a range</option>
+            <option>1-5</option>
+            <option>5-10</option>
+            <option>10-20</option>
+            <option>20+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pDealSize">Average contract value per client</label>
+          <input type="text" id="pDealSize" name="pDealSize" placeholder="ballpark, e.g. €500-1000">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="pMotion">Partnership type</label>
+          <select id="pMotion" name="pMotion">
+            <option value="">Select one</option>
+            <option>Reseller</option>
+            <option>Implementation + advisory</option>
+            <option>Referral-only</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pClientBase">Current active business clients</label>
+          <input type="text" id="pClientBase" name="pClientBase" placeholder="approximate number">
+        </div>
+      </div>
+
+      <div class="form-section-label">Compliance profile</div>
       <div class="field">
-        <label for="pUse">How many client packs per month, roughly?</label>
-        <input type="text" id="pUse" name="pUse" placeholder="e.g. 10-20 firms/month">
+        <label for="pIndustries">Primary industries you serve with AI</label>
+        <input type="text" id="pIndustries" name="pIndustries" placeholder="e.g. HR, finance, healthcare">
       </div>
       <div class="field">
-        <label for="pMsg">Anything else we should know?</label>
+        <label for="pAiCategories">Do you already sell/implement AI systems? Which categories?</label>
+        <input type="text" id="pAiCategories" name="pAiCategories" placeholder="e.g. limited-risk chatbots, GPAI integrations">
+      </div>
+      <div class="field">
+        <label for="pGovContact">Internal AI governance/compliance role?</label>
+        <input type="text" id="pGovContact" name="pGovContact" placeholder="e.g. Yes — Compliance Officer, or No">
+      </div>
+
+      <div class="form-section-label">Operational readiness</div>
+      <div class="field-row">
+        <div class="field">
+          <label for="pServiceType">Services offered</label>
+          <select id="pServiceType" name="pServiceType">
+            <option value="">Select one</option>
+            <option>Ongoing advisory / implementation</option>
+            <option>Software resale only</option>
+            <option>Both</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pDeployment">Preferred deployment for clients</label>
+          <select id="pDeployment" name="pDeployment">
+            <option value="">Select one</option>
+            <option>Cloud only</option>
+            <option>Hybrid</option>
+            <option>On-prem</option>
+          </select>
+        </div>
+      </div>
+      <div class="field checkbox-field">
+        <label><input type="checkbox" id="pApiCapable" name="pApiCapable"> Can integrate via API / webhook</label>
+      </div>
+
+      <div class="form-section-label">Anything else</div>
+      <div class="field">
+        <label for="pMsg">Describe how you plan to use the packs and your typical client profile (2-3 sentences)</label>
         <textarea id="pMsg" name="pMsg" placeholder="Optional"></textarea>
       </div>
+      <div class="field checkbox-field">
+        <label><input type="checkbox" id="pPricingSheet" name="pPricingSheet"> I want a pricing / margin sheet</label>
+      </div>
+      <div class="field checkbox-field">
+        <label><input type="checkbox" id="pCoMarketing" name="pCoMarketing"> I'm interested in co-marketing / webinars</label>
+      </div>
+
       <button type="submit" class="btn" id="pBtn">Send application</button>
     </form>
     <div class="status" id="pStatus"></div>
@@ -415,14 +530,39 @@ function setStatus(kind, msg){
   statusEl.textContent = msg;
 }
 
+function fieldVal(id){
+  const el = document.getElementById(id);
+  if(!el) return "";
+  if(el.type === "checkbox") return el.checked ? "Yes" : "No";
+  return el.value.trim();
+}
+
 form.addEventListener("submit", async function(e){
   e.preventDefault();
-  const email = document.getElementById("pEmail").value.trim();
-  const firmName = document.getElementById("pFirm").value.trim();
-  const usage = document.getElementById("pUse").value.trim();
-  const msg = document.getElementById("pMsg").value.trim();
 
-  if(!email || !firmName){
+  const data = {
+    email: fieldVal("pEmail"),
+    firmName: fieldVal("pFirm"),
+    country: fieldVal("pCountry"),
+    region: fieldVal("pRegion"),
+    website: fieldVal("pWebsite"),
+    category: fieldVal("pCategory"),
+    packsPerMonth: fieldVal("pUse"),
+    dealSize: fieldVal("pDealSize"),
+    motion: fieldVal("pMotion"),
+    clientBase: fieldVal("pClientBase"),
+    industries: fieldVal("pIndustries"),
+    aiCategories: fieldVal("pAiCategories"),
+    govContact: fieldVal("pGovContact"),
+    serviceType: fieldVal("pServiceType"),
+    deployment: fieldVal("pDeployment"),
+    apiCapable: fieldVal("pApiCapable"),
+    msg: fieldVal("pMsg"),
+    pricingSheet: fieldVal("pPricingSheet"),
+    coMarketing: fieldVal("pCoMarketing")
+  };
+
+  if(!data.email || !data.firmName){
     setStatus("err", "Email and firm name are required.");
     return;
   }
@@ -435,9 +575,9 @@ form.addEventListener("submit", async function(e){
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        email, firmName,
-        responsiblePerson: usage ? ("Partner inquiry: " + usage) : "Partner inquiry",
-        source: "partnership-distribution" + (msg ? (" | " + msg) : "")
+        email: data.email, firmName: data.firmName,
+        responsiblePerson: "Partner inquiry: " + (data.packsPerMonth || "range not specified"),
+        source: "partnership-distribution | " + JSON.stringify(data)
       })
     });
   }catch(err){
@@ -447,13 +587,37 @@ form.addEventListener("submit", async function(e){
   // The actual delivery mechanism: opens the visitor's own email client with
   // everything pre-filled, addressed to you. This is what actually reaches
   // your inbox — the D1 log above is a record, not a notification.
-  const subject = "Partnership application — " + firmName;
+  const subject = "Partnership application — " + data.firmName;
   const bodyLines = [
-    "Firm: " + firmName,
-    "Email: " + email,
-    "Estimated client packs/month: " + (usage || "(not specified)"),
+    "FIRM BASICS",
+    "Firm: " + data.firmName,
+    "Email: " + data.email,
+    "Country: " + (data.country || "-"),
+    "Region: " + (data.region || "-"),
+    "Website: " + (data.website || "-"),
+    "Service category: " + (data.category || "-"),
     "",
-    msg || "(no additional message)"
+    "COMMERCIAL POTENTIAL",
+    "Expected packs/month: " + (data.packsPerMonth || "-"),
+    "Avg contract value: " + (data.dealSize || "-"),
+    "Partnership type: " + (data.motion || "-"),
+    "Current client base: " + (data.clientBase || "-"),
+    "",
+    "COMPLIANCE PROFILE",
+    "Industries served: " + (data.industries || "-"),
+    "AI systems sold/implemented: " + (data.aiCategories || "-"),
+    "Internal AI governance role: " + (data.govContact || "-"),
+    "",
+    "OPERATIONAL READINESS",
+    "Services offered: " + (data.serviceType || "-"),
+    "Deployment preference: " + (data.deployment || "-"),
+    "API/webhook capable: " + data.apiCapable,
+    "",
+    "RELATIONSHIP SIGNALS",
+    "Wants pricing/margin sheet: " + data.pricingSheet,
+    "Interested in co-marketing: " + data.coMarketing,
+    "",
+    "Message: " + (data.msg || "(none)")
   ];
   const mailtoUrl = "mailto:contact@5thelement.ai"
     + "?subject=" + encodeURIComponent(subject)
