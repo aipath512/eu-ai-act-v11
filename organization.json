@@ -1,0 +1,84 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AIVENTURE S.R.L.",
+  "alternateName": "EU AI Act Ready™",
+  "url": "https://eu-ai-act.ro/",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "CUI",
+    "value": "51415878"
+  },
+  "vatID": "RO51415878",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Nr. Registrul Comerțului",
+      "value": "J2025016406000"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "EUID",
+      "value": "ROONRC.J2025016406000"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CAEN principal",
+      "value": "6210 — Activități de realizare a software-ului la comandă"
+    }
+  ],
+  "foundingDate": "2025-03-07",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Drumul Pădurea Pustnicu, Nr. 141C, Corp A",
+    "addressLocality": "București",
+    "addressRegion": "Sector 1",
+    "addressCountry": "RO"
+  },
+  "sameAs": [
+    "https://eu-ai-act-ready.eu",
+    "https://5thelement.ai",
+    "https://aiventure.ro",
+    "https://www.linkedin.com/company/107338970",
+    "https://www.linkedin.com/in/dan-ionesco-a856082a0",
+    "https://www.linkedin.com/showcase/5thelement-ai/",
+    "https://www.crunchbase.com/organization/aiventure-s-r-l",
+    "https://x.com/aipath512",
+    "https://www.facebook.com/people/Aiventure/61573220584246/",
+    "https://www.youtube.com/@AIVenture-q8u",
+    "https://medium.com/@aipath512"
+  ],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "EU AI Act Ready™ — Governance Pack",
+      "description": "Generare automată a 70+ documente operaționale de guvernanță AI (10 module), preview gratuit, asistent conversațional ASK EU AI Act™, și infrastructură de verificare la distanță (RRVI™) pentru auditori.",
+      "provider": {
+        "@type": "Organization",
+        "name": "AIVENTURE S.R.L."
+      },
+      "areaServed": "RO",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "IMM, cabinete de avocatură, consultanți, freelanceri, echipe de compliance"
+      }
+    },
+    "price": "0",
+    "priceCurrency": "EUR",
+    "eligibleQuantity": {
+      "@type": "QuantitativeValue",
+      "description": "Free Readiness Pack preview (până la 40% din Governance Pack) disponibil cu cont gratuit"
+    }
+  },
+  "partner": {
+    "@type": "Organization",
+    "name": "ECB Tax Accounting & HR SRL",
+    "url": "https://eu-ai-act.ro/#partner",
+    "founder": {
+      "@type": "Person",
+      "name": "Roxana Deak",
+      "jobTitle": "Managing Partner, Certified Public Accountant (FCCA, CPA, CCF)"
+    }
+  }
+}
