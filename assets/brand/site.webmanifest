@@ -1,0 +1,29 @@
+{
+  "name": "EU AI Act Ready",
+  "short_name": "EU AI Act Ready",
+  "description": "Conversational EU AI Act readiness generator: 70 documents, 10 modules, 15 minutes.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/brand/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#010e19",
+  "background_color": "#010e19",
+  "display": "browser"
+}
