@@ -21,12 +21,14 @@ class DropCanonical {
 }
 
 class HeadLayer {
-  constructor(href) { this.href = href; }
+  // withGraph=false pe homepage: pagina are deja static graful complet (Organization, WebSite, ...),
+  // iar o a doua copie ar dubla @id-urile.
+  constructor(href, withGraph) { this.href = href; this.withGraph = withGraph; }
   element(el) {
     el.append(
       '<link rel="canonical" href="' + this.href + '">' +
-      '<script type="application/ld+json" id="canonical-entity">' +
-      JSON.stringify(ENTITY_GRAPH) + '</script>',
+      (this.withGraph ? '<script type="application/ld+json" id="canonical-entity">' +
+      JSON.stringify(ENTITY_GRAPH) + '</script>' : ''),
       { html: true }
     );
   }
@@ -41,6 +43,6 @@ export async function onRequest(context) {
 
   return new HTMLRewriter()
     .on('link[rel="canonical"]', new DropCanonical())
-    .on("head", new HeadLayer(href))
+    .on("head", new HeadLayer(href, canonicalPath(context.request.url) !== "/"))
     .transform(response);
 }
