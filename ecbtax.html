@@ -191,21 +191,89 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Acasă","item":"https://eu-ai-act-ready.eu/"},
-          {"@type":"ListItem","position":2,"name":"Studii de caz","item":"https://eu-ai-act-ready.eu/resources"},
-          {"@type":"ListItem","position":3,"name":"ECBTax","item":"https://eu-ai-act-ready.eu/ecbtax"}
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Acasă",
+            "item": "https://eu-ai-act-ready.eu/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Studii de caz",
+            "item": "https://eu-ai-act-ready.eu/resources"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ECBTax",
+            "item": "https://eu-ai-act-ready.eu/ecbtax"
+          }
         ]
       },
       {
         "@type": "Organization",
-        "@id": "https://eu-ai-act-ready.eu/#organization",
-        "name": "EU AI Act Ready",
-        "url": "https://eu-ai-act-ready.eu/",
+        "@id": "https://5thelement.ai/#organization",
+        "name": "AiVenture S.R.L.",
+        "url": "https://5thelement.ai/",
         "parentOrganization": {
           "@type": "Organization",
           "name": "AiVenture S.R.L.",
           "alternateName": "5thElement.ai"
-        }
+        },
+        "brand": {
+          "@type": "Brand",
+          "name": "EU AI Act Ready"
+        },
+        "legalName": "AiVenture S.R.L.",
+        "taxID": "51415878",
+        "vatID": "RO51415878",
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "propertyID": "CUI",
+            "value": "51415878"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "EUID",
+            "value": "ROONRC.J2025016406000"
+          },
+          {
+            "@type": "PropertyValue",
+            "propertyID": "ONRC",
+            "value": "J2025016406000"
+          }
+        ],
+        "foundingDate": "2025-03-07",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Drumul Pădurea Pustnicul nr. 141C, Corp A, Etaj 2, Ap. 5",
+          "addressLocality": "București",
+          "addressRegion": "Sector 1",
+          "postalCode": "014044",
+          "addressCountry": "RO"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Dan Ionescu",
+          "sameAs": [
+            "https://orcid.org/0009-0002-5498-1046",
+            "https://ro.linkedin.com/in/dan-ionesco-a856082a0"
+          ]
+        },
+        "sameAs": [
+          "https://5thelement.ai/",
+          "https://aiventure.ro/",
+          "https://www.linkedin.com/company/107338970",
+          "https://www.linkedin.com/showcase/5thelement-ai/",
+          "https://www.crunchbase.com/organization/aiventure-s-r-l",
+          "https://www.facebook.com/people/Aiventure/61573220584246/",
+          "https://x.com/aipath512",
+          "https://www.youtube.com/@AIVenture-q8u",
+          "https://medium.com/@aipath512",
+          "https://www.reddit.com/user/AiVentureRO/"
+        ]
       },
       {
         "@type": "Organization",
@@ -213,18 +281,31 @@
         "name": "ECBTax",
         "url": "https://ecbtax.com",
         "description": "Firmă de contabilitate și consultanță fiscală.",
-        "founder": {"@id": "https://eu-ai-act-ready.eu/ecbtax#person"}
+        "founder": {
+          "@id": "https://eu-ai-act-ready.eu/ecbtax#person"
+        }
       },
       {
         "@type": "Person",
         "@id": "https://eu-ai-act-ready.eu/ecbtax#person",
         "name": "Roxana Deak",
         "jobTitle": "CEO & Fondator",
-        "worksFor": {"@id": "https://eu-ai-act-ready.eu/ecbtax#organization"},
+        "worksFor": {
+          "@id": "https://eu-ai-act-ready.eu/ecbtax#organization"
+        },
         "hasCredential": [
-          {"@type": "EducationalOccupationalCredential", "name": "FCCA"},
-          {"@type": "EducationalOccupationalCredential", "name": "CPA"},
-          {"@type": "EducationalOccupationalCredential", "name": "CCF"}
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "FCCA"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "CPA"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "CCF"
+          }
         ]
       },
       {
@@ -233,24 +314,100 @@
         "headline": "Primul client care a implementat EU AI Act Ready™",
         "description": "ECBTax a adoptat pachetul complet de conformitate EU AI Act — 10 module, 70 de documente.",
         "url": "https://eu-ai-act-ready.eu/ecbtax",
-        "about": {"@id": "https://eu-ai-act-ready.eu/ecbtax#organization"},
-        "author": {"@id": "https://eu-ai-act-ready.eu/#organization"},
-        "publisher": {"@id": "https://eu-ai-act-ready.eu/#organization"},
+        "about": {
+          "@id": "https://eu-ai-act-ready.eu/ecbtax#organization"
+        },
+        "author": {
+          "@id": "https://5thelement.ai/#organization"
+        },
+        "publisher": {
+          "@id": "https://5thelement.ai/#organization"
+        },
         "inLanguage": "ro"
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {"@type":"Question","name":"Ce este EU AI Act Ready™?","acceptedAnswer":{"@type":"Answer","text":"Un pachet de conformitate pentru Regulamentul UE 2024/1689, format din 10 module operaționale și 70 de documente de guvernanță, plus RRVI™ pentru verificare la distanță."}},
-          {"@type":"Question","name":"Cine este primul client care a implementat pachetul?","acceptedAnswer":{"@type":"Answer","text":"ECBTax, firmă de contabilitate condusă de Roxana Deak."}},
-          {"@type":"Question","name":"Cine este Roxana Deak?","acceptedAnswer":{"@type":"Answer","text":"CEO și Fondator ECBTax.com, expert contabil FCCA, CPA, CCF, partener strategic tehnologic al AiVenture / 5thElement.ai."}},
-          {"@type":"Question","name":"Ce este ECBTax?","acceptedAnswer":{"@type":"Answer","text":"O firmă de contabilitate și consultanță fiscală care folosește instrumente AI în activitatea zilnică."}},
-          {"@type":"Question","name":"Câte module a implementat ECBTax?","acceptedAnswer":{"@type":"Answer","text":"Toate cele 10 module operaționale ale pachetului."}},
-          {"@type":"Question","name":"Câte documente a primit ECBTax?","acceptedAnswer":{"@type":"Answer","text":"70 de documente de guvernanță, plus ghidurile și manualele de implementare."}},
-          {"@type":"Question","name":"Ce este RRVI™?","acceptedAnswer":{"@type":"Answer","text":"Infrastructura de verificare la distanță pentru inspectori, pentru reconstituirea traseului dovezilor de conformitate."}},
-          {"@type":"Question","name":"Sunt ancorate criptografic credențialele Roxanei Deak?","acceptedAnswer":{"@type":"Answer","text":"Da, patru documente verificate independent via OpenTimestamps."}},
-          {"@type":"Question","name":"Pe ce blockchain sunt ancorate documentele?","acceptedAnswer":{"@type":"Answer","text":"Bitcoin, bloc de referință 954297."}},
-          {"@type":"Question","name":"De ce a ales ECBTax pachetul EU AI Act Ready™?","acceptedAnswer":{"@type":"Answer","text":"Ca firmă care folosește AI zilnic fără echipă internă de conformitate, a găsit în RRVI™ o logică de proveniență verificabilă similară cu ancorarea deja folosită pentru propriile credențiale."}}
+          {
+            "@type": "Question",
+            "name": "Ce este EU AI Act Ready™?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un pachet de conformitate pentru Regulamentul UE 2024/1689, format din 10 module operaționale și 70 de documente de guvernanță, plus RRVI™ pentru verificare la distanță."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cine este primul client care a implementat pachetul?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ECBTax, firmă de contabilitate condusă de Roxana Deak."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cine este Roxana Deak?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CEO și Fondator ECBTax.com, expert contabil FCCA, CPA, CCF, partener strategic tehnologic al AiVenture / 5thElement.ai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ce este ECBTax?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O firmă de contabilitate și consultanță fiscală care folosește instrumente AI în activitatea zilnică."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Câte module a implementat ECBTax?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Toate cele 10 module operaționale ale pachetului."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Câte documente a primit ECBTax?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "70 de documente de guvernanță, plus ghidurile și manualele de implementare."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ce este RRVI™?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Infrastructura de verificare la distanță pentru inspectori, pentru reconstituirea traseului dovezilor de conformitate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Sunt ancorate criptografic credențialele Roxanei Deak?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, patru documente verificate independent via OpenTimestamps."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pe ce blockchain sunt ancorate documentele?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bitcoin, bloc de referință 954297."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "De ce a ales ECBTax pachetul EU AI Act Ready™?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ca firmă care folosește AI zilnic fără echipă internă de conformitate, a găsit în RRVI™ o logică de proveniență verificabilă similară cu ancorarea deja folosită pentru propriile credențiale."
+            }
+          }
         ]
       }
     ]

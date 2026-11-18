@@ -213,7 +213,7 @@
   "schema_org_crosswalk": {
     "purpose": "Maps each logical entity above to the schema.org @type actually emitted in this site's live JSON-LD, so the correspondence between the conceptual model and the deployed markup is explicit and auditable rather than assumed.",
     "mappings": [
-      { "entity": "Organization", "schema_org_type": "Organization", "deployed_on": "all 48 pages, @id https://eu-ai-act-ready.eu/#organization" },
+      { "entity": "Organization", "schema_org_type": "Organization", "deployed_on": "all 48 pages, @id https://5thelement.ai/#organization" },
       { "entity": "Page", "schema_org_type": "WebPage", "deployed_on": "per-page, @id {page_url}#page" },
       { "entity": "Page (site root)", "schema_org_type": "WebSite", "deployed_on": "all pages, @id https://eu-ai-act-ready.eu/#website" },
       { "entity": "Page-to-Page navigation", "schema_org_type": "BreadcrumbList", "deployed_on": "47 of 48 pages (all except index.html), @id {page_url}#breadcrumb" },

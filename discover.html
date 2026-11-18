@@ -25,35 +25,154 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "WebSite", "@id": "https://eu-ai-act-ready.eu/#website", "url": "https://eu-ai-act-ready.eu/", "name": "EU AI Act Ready", "publisher": { "@id": "https://eu-ai-act-ready.eu/#organization" } },
-    { "@type": "Organization", "@id": "https://eu-ai-act-ready.eu/#organization", "name": "EU AI Act Ready™", "legalName": "AiVenture S.R.L.", "url": "https://eu-ai-act-ready.eu/", "logo": { "@type": "ImageObject", "url": "https://eu-ai-act-ready.eu/assets/logo.png" } },
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready",
+      "publisher": {
+        "@id": "https://5thelement.ai/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://5thelement.ai/#organization",
+      "name": "AiVenture S.R.L.",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://5thelement.ai/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "EU AI Act Ready™"
+      },
+      "taxID": "51415878",
+      "vatID": "RO51415878",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "CUI",
+          "value": "51415878"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "EUID",
+          "value": "ROONRC.J2025016406000"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ONRC",
+          "value": "J2025016406000"
+        }
+      ],
+      "foundingDate": "2025-03-07",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Drumul Pădurea Pustnicul nr. 141C, Corp A, Etaj 2, Ap. 5",
+        "addressLocality": "București",
+        "addressRegion": "Sector 1",
+        "postalCode": "014044",
+        "addressCountry": "RO"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Dan Ionescu",
+        "sameAs": [
+          "https://orcid.org/0009-0002-5498-1046",
+          "https://ro.linkedin.com/in/dan-ionesco-a856082a0"
+        ]
+      },
+      "sameAs": [
+        "https://5thelement.ai/",
+        "https://aiventure.ro/",
+        "https://www.linkedin.com/company/107338970",
+        "https://www.linkedin.com/showcase/5thelement-ai/",
+        "https://www.crunchbase.com/organization/aiventure-s-r-l",
+        "https://www.facebook.com/people/Aiventure/61573220584246/",
+        "https://x.com/aipath512",
+        "https://www.youtube.com/@AIVenture-q8u",
+        "https://medium.com/@aipath512",
+        "https://www.reddit.com/user/AiVentureRO/"
+      ]
+    },
     {
       "@type": "WebPage",
       "@id": "https://eu-ai-act-ready.eu/discover#page",
       "url": "https://eu-ai-act-ready.eu/discover",
       "name": "Discover Your AI Usage & Obligations — EU AI Act Ready™",
       "description": "Step 1 of EU AI Act readiness — discover where your organisation already uses AI and what obligations that triggers.",
-      "isPartOf": { "@id": "https://eu-ai-act-ready.eu/#website" },
+      "isPartOf": {
+        "@id": "https://eu-ai-act-ready.eu/#website"
+      },
       "inLanguage": "en",
-      "breadcrumb": { "@id": "https://eu-ai-act-ready.eu/discover#breadcrumb" }
+      "breadcrumb": {
+        "@id": "https://eu-ai-act-ready.eu/discover#breadcrumb"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://eu-ai-act-ready.eu/discover#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/" },
-        { "@type": "ListItem", "position": 2, "name": "Discover", "item": "https://eu-ai-act-ready.eu/discover" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eu-ai-act-ready.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Discover",
+          "item": "https://eu-ai-act-ready.eu/discover"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://eu-ai-act-ready.eu/discover#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Does using ChatGPT or Copilot at work count as using AI?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If employees use AI tools for drafting, coding, customer support, marketing, or decision support, your organisation is a deployer of AI systems under the EU AI Act, with obligations attached regardless of company size." } },
-        { "@type": "Question", "name": "Do I need to know every AI tool used across my company?", "acceptedAnswer": { "@type": "Answer", "text": "You need a reasonable inventory — the AI systems your teams actually rely on for real work. Shadow tools individual employees try once are lower priority than tools embedded in regular business processes." } },
-        { "@type": "Question", "name": "What if I don't build AI, I just use tools that have AI features?", "acceptedAnswer": { "@type": "Answer", "text": "You're still a deployer, which carries its own obligations distinct from a provider (the company that built the AI system) — deployers must still ensure appropriate use, human oversight, and staff AI literacy." } },
-        { "@type": "Question", "name": "How do I know if what I'm doing is high-risk?", "acceptedAnswer": { "@type": "Answer", "text": "High-risk classification depends on the AI system's intended purpose and its potential impact on safety or fundamental rights — for example AI used in hiring, credit scoring, or biometric identification is far more likely to be high-risk than an AI writing assistant." } },
-        { "@type": "Question", "name": "What's the very first thing I should do?", "acceptedAnswer": { "@type": "Answer", "text": "List every AI system currently in active use across your organisation, however informal — that inventory is the foundation every other compliance step builds on." } }
+        {
+          "@type": "Question",
+          "name": "Does using ChatGPT or Copilot at work count as using AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If employees use AI tools for drafting, coding, customer support, marketing, or decision support, your organisation is a deployer of AI systems under the EU AI Act, with obligations attached regardless of company size."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to know every AI tool used across my company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need a reasonable inventory — the AI systems your teams actually rely on for real work. Shadow tools individual employees try once are lower priority than tools embedded in regular business processes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I don't build AI, I just use tools that have AI features?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You're still a deployer, which carries its own obligations distinct from a provider (the company that built the AI system) — deployers must still ensure appropriate use, human oversight, and staff AI literacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if what I'm doing is high-risk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "High-risk classification depends on the AI system's intended purpose and its potential impact on safety or fundamental rights — for example AI used in hiring, credit scoring, or biometric identification is far more likely to be high-risk than an AI writing assistant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the very first thing I should do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "List every AI system currently in active use across your organisation, however informal — that inventory is the foundation every other compliance step builds on."
+          }
+        }
       ]
     }
   ]

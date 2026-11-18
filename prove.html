@@ -25,35 +25,154 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "WebSite", "@id": "https://eu-ai-act-ready.eu/#website", "url": "https://eu-ai-act-ready.eu/", "name": "EU AI Act Ready", "publisher": { "@id": "https://eu-ai-act-ready.eu/#organization" } },
-    { "@type": "Organization", "@id": "https://eu-ai-act-ready.eu/#organization", "name": "EU AI Act Ready™", "legalName": "AiVenture S.R.L.", "url": "https://eu-ai-act-ready.eu/", "logo": { "@type": "ImageObject", "url": "https://eu-ai-act-ready.eu/assets/logo.png" } },
+    {
+      "@type": "WebSite",
+      "@id": "https://eu-ai-act-ready.eu/#website",
+      "url": "https://eu-ai-act-ready.eu/",
+      "name": "EU AI Act Ready",
+      "publisher": {
+        "@id": "https://5thelement.ai/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://5thelement.ai/#organization",
+      "name": "AiVenture S.R.L.",
+      "legalName": "AiVenture S.R.L.",
+      "url": "https://5thelement.ai/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eu-ai-act-ready.eu/assets/logo.png"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "EU AI Act Ready™"
+      },
+      "taxID": "51415878",
+      "vatID": "RO51415878",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "CUI",
+          "value": "51415878"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "EUID",
+          "value": "ROONRC.J2025016406000"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ONRC",
+          "value": "J2025016406000"
+        }
+      ],
+      "foundingDate": "2025-03-07",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Drumul Pădurea Pustnicul nr. 141C, Corp A, Etaj 2, Ap. 5",
+        "addressLocality": "București",
+        "addressRegion": "Sector 1",
+        "postalCode": "014044",
+        "addressCountry": "RO"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Dan Ionescu",
+        "sameAs": [
+          "https://orcid.org/0009-0002-5498-1046",
+          "https://ro.linkedin.com/in/dan-ionesco-a856082a0"
+        ]
+      },
+      "sameAs": [
+        "https://5thelement.ai/",
+        "https://aiventure.ro/",
+        "https://www.linkedin.com/company/107338970",
+        "https://www.linkedin.com/showcase/5thelement-ai/",
+        "https://www.crunchbase.com/organization/aiventure-s-r-l",
+        "https://www.facebook.com/people/Aiventure/61573220584246/",
+        "https://x.com/aipath512",
+        "https://www.youtube.com/@AIVenture-q8u",
+        "https://medium.com/@aipath512",
+        "https://www.reddit.com/user/AiVentureRO/"
+      ]
+    },
     {
       "@type": "WebPage",
       "@id": "https://eu-ai-act-ready.eu/prove#page",
       "url": "https://eu-ai-act-ready.eu/prove",
       "name": "Prove Your Readiness With Evidence — EU AI Act Ready™",
       "description": "Step 3 of EU AI Act readiness — how RRVI™ evidence, SHA-256 hashing, and OpenTimestamps proof let you demonstrate compliance to an auditor or inspector.",
-      "isPartOf": { "@id": "https://eu-ai-act-ready.eu/#website" },
+      "isPartOf": {
+        "@id": "https://eu-ai-act-ready.eu/#website"
+      },
       "inLanguage": "en",
-      "breadcrumb": { "@id": "https://eu-ai-act-ready.eu/prove#breadcrumb" }
+      "breadcrumb": {
+        "@id": "https://eu-ai-act-ready.eu/prove#breadcrumb"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://eu-ai-act-ready.eu/prove#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://eu-ai-act-ready.eu/" },
-        { "@type": "ListItem", "position": 2, "name": "Prove", "item": "https://eu-ai-act-ready.eu/prove" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eu-ai-act-ready.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Prove",
+          "item": "https://eu-ai-act-ready.eu/prove"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://eu-ai-act-ready.eu/prove#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "What does proof mean for a compliance document?", "acceptedAnswer": { "@type": "Answer", "text": "It means an auditor can verify a document existed in a specific state at a specific time and hasn't been altered since — not just that you say it's true." } },
-        { "@type": "Question", "name": "What is SHA-256 hashing used for here?", "acceptedAnswer": { "@type": "Answer", "text": "Each generated document gets a unique cryptographic fingerprint (hash). If even one character changes, the hash changes completely, making tampering immediately detectable." } },
-        { "@type": "Question", "name": "What is OpenTimestamps?", "acceptedAnswer": { "@type": "Answer", "text": "A free, open protocol that anchors a document's hash to the Bitcoin blockchain, creating an independently verifiable timestamp that doesn't depend on trusting any single company's server." } },
-        { "@type": "Question", "name": "Does this replace formal certification?", "acceptedAnswer": { "@type": "Answer", "text": "No — it makes your evidence verifiable and inspection-ready, not certified. There is a real difference between readiness (structured, traceable, inspectable evidence) and formal third-party certification." } },
-        { "@type": "Question", "name": "What would an inspector actually see?", "acceptedAnswer": { "@type": "Answer", "text": "A structured evidence trail: the document itself, its hash, its timestamp proof, and which module and responsible person it's tied to — reviewable remotely, without an on-site visit." } }
+        {
+          "@type": "Question",
+          "name": "What does proof mean for a compliance document?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It means an auditor can verify a document existed in a specific state at a specific time and hasn't been altered since — not just that you say it's true."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is SHA-256 hashing used for here?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each generated document gets a unique cryptographic fingerprint (hash). If even one character changes, the hash changes completely, making tampering immediately detectable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is OpenTimestamps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A free, open protocol that anchors a document's hash to the Bitcoin blockchain, creating an independently verifiable timestamp that doesn't depend on trusting any single company's server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this replace formal certification?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — it makes your evidence verifiable and inspection-ready, not certified. There is a real difference between readiness (structured, traceable, inspectable evidence) and formal third-party certification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What would an inspector actually see?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A structured evidence trail: the document itself, its hash, its timestamp proof, and which module and responsible person it's tied to — reviewable remotely, without an on-site visit."
+          }
+        }
       ]
     }
   ]
